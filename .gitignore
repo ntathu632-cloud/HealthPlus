@@ -24,3 +24,6 @@ Thumbs.db
 
 # Uploads (local dev file storage)
 HealthPlus/HealthPlus/uploads/
+
+# Runtime logs (Serilog)
+**/logs/

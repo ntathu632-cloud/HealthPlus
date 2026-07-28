@@ -1,8 +1,0 @@
-2026-07-29 02:56:06.727 +07:00 [INF] ReminderBackgroundService started.
-2026-07-29 02:56:07.210 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
-2026-07-29 02:56:17.574 +07:00 [INF] HTTP POST /api/auth/login responded 400 in 410.1451 ms
-2026-07-29 02:56:17.692 +07:00 [INF] HTTP POST /api/ai-chat/messages responded 401 in 21.9096 ms
-2026-07-29 02:56:22.250 +07:00 [INF] HTTP POST /api/auth/login responded 400 in 40.9220 ms
-2026-07-29 02:56:33.051 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 2354.2913 ms
-2026-07-29 02:56:40.388 +07:00 [INF] HTTP POST /api/ai-chat/messages responded 200 in 7163.6386 ms
-2026-07-29 03:00:13.454 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 1026.4246 ms
