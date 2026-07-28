@@ -16,6 +16,7 @@ public static class DependencyInjection
         services.Configure<FirebaseSettings>(configuration.GetSection("Firebase"));
         services.Configure<TwilioSettings>(configuration.GetSection("Twilio"));
         services.Configure<AiChatSettings>(configuration.GetSection("AiChat"));
+        services.Configure<GoogleSettings>(configuration.GetSection("Google"));
         services.AddScoped<IJwtService, JwtService>();
         services.AddScoped<IPasswordService, PasswordService>();
         services.AddScoped<IEmailSender, SmtpEmailSender>();
@@ -25,6 +26,7 @@ public static class DependencyInjection
         services.AddScoped<IFileStorageService, LocalFileStorageService>();
         services.AddScoped<IOcrService, TesseractOcrService>();
         services.AddScoped<IContactService, ContactService>();
+        services.AddScoped<IGoogleTokenValidator, GoogleTokenValidator>();
 
         services.AddHttpClient<IAiCompletionClient, GeminiCompletionClient>(client =>
         {

@@ -59,6 +59,20 @@ public class AuthController : BaseApiController
         }
     }
 
+    [HttpPost("google-login")]
+    public async Task<IActionResult> GoogleLogin([FromBody] GoogleLoginRequest request, CancellationToken ct)
+    {
+        try
+        {
+            var result = await _auth.GoogleLoginAsync(request.IdToken, CurrentUserIp, ct);
+            return Ok(ApiResponse<AuthResponse>.Ok(result, "Đăng nhập thành công."));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Unauthorized(ApiResponse<AuthResponse>.Fail(ex.Message));
+        }
+    }
+
     [HttpPost("refresh")]
     public async Task<IActionResult> Refresh([FromBody] RefreshTokenRequest request, CancellationToken ct)
     {

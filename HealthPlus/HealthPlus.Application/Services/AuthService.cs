@@ -10,12 +10,14 @@ public class AuthService : IAuthService
     private readonly IUnitOfWork _uow;
     private readonly IJwtService _jwt;
     private readonly IPasswordService _password;
+    private readonly IGoogleTokenValidator _googleValidator;
 
-    public AuthService(IUnitOfWork uow, IJwtService jwt, IPasswordService password)
+    public AuthService(IUnitOfWork uow, IJwtService jwt, IPasswordService password, IGoogleTokenValidator googleValidator)
     {
         _uow = uow;
         _jwt = jwt;
         _password = password;
+        _googleValidator = googleValidator;
     }
 
     public async Task<AuthResponse> RegisterAsync(RegisterRequest request, CancellationToken ct = default)
@@ -62,6 +64,53 @@ public class AuthService : IAuthService
         var response = await BuildAuthResponseAsync(user, roles, ipAddress, ct);
 
         // Cập nhật LastLoginAt
+        user.LastLoginAt = DateTime.UtcNow;
+        _uow.Users.Update(user);
+        await _uow.SaveChangesAsync(ct);
+
+        return response;
+    }
+
+    public async Task<AuthResponse> GoogleLoginAsync(string idToken, string? ipAddress = null, CancellationToken ct = default)
+    {
+        var googleUser = await _googleValidator.ValidateAsync(idToken, ct)
+            ?? throw new UnauthorizedAccessException("Google token không hợp lệ.");
+
+        var email = googleUser.Email.ToLower().Trim();
+        var user = await _uow.Users.FirstOrDefaultAsync(u => u.Email == email, ct);
+
+        if (user is null)
+        {
+            user = new User
+            {
+                Id = Guid.NewGuid(),
+                Email = email,
+                // Tài khoản đăng nhập qua Google không có mật khẩu thật — lưu hash của 1 chuỗi
+                // ngẫu nhiên để cột PasswordHash (NOT NULL) không bao giờ khớp mật khẩu ai đó tự nhập.
+                PasswordHash = _password.Hash(Guid.NewGuid().ToString()),
+                FullName = string.IsNullOrWhiteSpace(googleUser.Name) ? email : googleUser.Name,
+                IsActive = true,
+                IsEmailVerified = true,
+            };
+
+            await _uow.Users.AddAsync(user, ct);
+
+            var userRole = new UserRole { UserId = user.Id, RoleId = 3 };
+            await _uow.UserRoles.AddAsync(userRole, ct);
+
+            var notifSetting = new UserNotificationSetting { UserId = user.Id };
+            await _uow.UserNotificationSettings.AddAsync(notifSetting, ct);
+
+            await _uow.SaveChangesAsync(ct);
+        }
+        else if (!user.IsActive)
+        {
+            throw new UnauthorizedAccessException("Tài khoản đã bị khóa.");
+        }
+
+        var roles = await GetUserRolesAsync(user.Id, ct);
+        var response = await BuildAuthResponseAsync(user, roles, ipAddress, ct);
+
         user.LastLoginAt = DateTime.UtcNow;
         _uow.Users.Update(user);
         await _uow.SaveChangesAsync(ct);

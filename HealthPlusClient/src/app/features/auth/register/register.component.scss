@@ -176,6 +176,9 @@
   &:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-2px); }
 }
 
+/* Nút Google Identity tự vẽ giao diện riêng — bỏ khung/nền của .social-btn để không bị viền đôi */
+.google-btn-slot { border: none; background: transparent; &:hover { box-shadow: none; transform: none; } }
+
 .auth-link {
   text-align: center; color: #616161; font-size: 14px; margin: 20px 0 0;
   a { color: #1565C0; font-weight: 600; text-decoration: none; }

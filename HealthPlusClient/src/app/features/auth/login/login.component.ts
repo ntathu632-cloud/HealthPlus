@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, signal, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
@@ -10,6 +10,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { AuthService } from '../../../core/auth/auth.service';
 import { homeRouteForRoles } from '../../../core/auth/role-routes';
+import { GoogleIdentityService } from '../../../core/services/google-identity.service';
 
 @Component({
     templateUrl: './login.component.html',
@@ -22,7 +23,9 @@ import { homeRouteForRoles } from '../../../core/auth/role-routes';
     MatButtonModule, MatIconModule, MatProgressSpinnerModule, MatSnackBarModule,
   ]
 })
-export class LoginComponent {
+export class LoginComponent implements AfterViewInit {
+  @ViewChild('googleBtn') googleBtn?: ElementRef<HTMLElement>;
+
   form: FormGroup;
   loading = signal(false);
   showPassword = signal(false);
@@ -33,10 +36,29 @@ export class LoginComponent {
     private authService: AuthService,
     private router: Router,
     private snackBar: MatSnackBar,
+    private googleIdentity: GoogleIdentityService,
   ) {
     this.form = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
+    });
+  }
+
+  ngAfterViewInit(): void {
+    if (this.googleBtn) {
+      this.googleIdentity.renderButton(this.googleBtn.nativeElement, (idToken) => this.onGoogleCredential(idToken));
+    }
+  }
+
+  private onGoogleCredential(idToken: string): void {
+    this.loading.set(true);
+    this.errorMsg.set('');
+    this.authService.googleLogin(idToken).subscribe({
+      next: (res) => this.router.navigate([homeRouteForRoles(res.data.user.roles)]),
+      error: (err) => {
+        this.loading.set(false);
+        this.errorMsg.set(err.error?.errors?.[0] ?? 'Đăng nhập bằng Google thất bại.');
+      },
     });
   }
 

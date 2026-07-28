@@ -35,6 +35,12 @@ export class AuthService {
     );
   }
 
+  googleLogin(idToken: string): Observable<ApiResponse<AuthResponse>> {
+    return this.http.post<ApiResponse<AuthResponse>>(`${this.api}/google-login`, { idToken }).pipe(
+      tap(res => this.handleAuthSuccess(res.data))
+    );
+  }
+
   refresh(): Observable<ApiResponse<AuthResponse>> {
     const refreshToken = this.tokenService.getRefreshToken();
     return this.http.post<ApiResponse<AuthResponse>>(`${this.api}/refresh`, { refreshToken }).pipe(

@@ -10,4 +10,5 @@ export const environment = {
     appId: '1:852027992399:web:02528d93cd8a852685fd3a',
   },
   fcmVapidKey: 'BIL2pOQIxEQMBxkJTlpg3XcB1Em-3Wrb-d5OxemhPJ9YgVebnB8Def6teCnD36-dBqnmRdiZyA9HWIcFjkdaEts',
+  googleClientId: '852027992399-b0mduibbtpapqpvg3pakr69f40jvggjc.apps.googleusercontent.com',
 };

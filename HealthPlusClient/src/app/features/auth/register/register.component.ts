@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, signal, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
@@ -9,6 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { AuthService } from '../../../core/auth/auth.service';
+import { GoogleIdentityService } from '../../../core/services/google-identity.service';
+import { homeRouteForRoles } from '../../../core/auth/role-routes';
 
 @Component({
     templateUrl: './register.component.html',
@@ -21,7 +23,9 @@ import { AuthService } from '../../../core/auth/auth.service';
     MatButtonModule, MatIconModule, MatProgressSpinnerModule, MatSnackBarModule,
   ]
 })
-export class RegisterComponent {
+export class RegisterComponent implements AfterViewInit {
+  @ViewChild('googleBtn') googleBtn?: ElementRef<HTMLElement>;
+
   form: FormGroup;
   loading = signal(false);
   showPassword = signal(false);
@@ -32,12 +36,31 @@ export class RegisterComponent {
     private authService: AuthService,
     private router: Router,
     private snackBar: MatSnackBar,
+    private googleIdentity: GoogleIdentityService,
   ) {
     this.form = this.fb.group({
       fullName:    ['', Validators.required],
       email:       ['', [Validators.required, Validators.email]],
       phoneNumber: [''],
       password:    ['', [Validators.required, Validators.minLength(8)]],
+    });
+  }
+
+  ngAfterViewInit(): void {
+    if (this.googleBtn) {
+      this.googleIdentity.renderButton(this.googleBtn.nativeElement, (idToken) => this.onGoogleCredential(idToken));
+    }
+  }
+
+  private onGoogleCredential(idToken: string): void {
+    this.loading.set(true);
+    this.errorMsg.set('');
+    this.authService.googleLogin(idToken).subscribe({
+      next: (res) => this.router.navigate([homeRouteForRoles(res.data.user.roles)]),
+      error: (err) => {
+        this.loading.set(false);
+        this.errorMsg.set(err.error?.errors?.[0] ?? 'Đăng ký bằng Google thất bại.');
+      },
     });
   }
 
