@@ -24,6 +24,7 @@ public static class DependencyInjection
         services.AddScoped<INotificationService, NotificationService>();
         services.AddScoped<IFileStorageService, LocalFileStorageService>();
         services.AddScoped<IOcrService, TesseractOcrService>();
+        services.AddScoped<IContactService, ContactService>();
 
         services.AddHttpClient<IAiCompletionClient, GeminiCompletionClient>(client =>
         {

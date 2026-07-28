@@ -5,15 +5,10 @@
 
   <div class="contact-layout">
     <div class="contact-main">
-      <div class="note">
-        <mat-icon>info</mat-icon>
-        <span>Đây là bản demo — tin nhắn gửi đi sẽ chưa thực sự được chuyển tới hộp thư hỗ trợ.</span>
-      </div>
-
       @if (sent()) {
         <div class="sent-confirm">
           <mat-icon>check_circle</mat-icon>
-          <p>Cảm ơn bạn đã liên hệ! Đây là bản demo nên tin nhắn chưa được gửi đi thật, nhưng form đã hoạt động đúng.</p>
+          <p>Cảm ơn bạn đã liên hệ! Tin nhắn của bạn đã được gửi tới đội ngũ hỗ trợ.</p>
         </div>
       } @else {
         <form [formGroup]="form" (ngSubmit)="onSubmit()" class="contact-form">
@@ -32,8 +27,8 @@
             <textarea matInput rows="5" formControlName="message"></textarea>
           </mat-form-field>
 
-          <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid" class="submit-btn">
-            Gửi liên hệ
+          <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid || sending()" class="submit-btn">
+            {{ sending() ? 'Đang gửi...' : 'Gửi liên hệ' }}
           </button>
         </form>
       }
