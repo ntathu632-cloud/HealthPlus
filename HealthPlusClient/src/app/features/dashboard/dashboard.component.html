@@ -1,0 +1,157 @@
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div>
+      <p class="hero-date">{{ today | date:'EEEE, dd MMMM yyyy':'':'vi' }}</p>
+      <h1 class="hero-title">Xin chào, <span>{{ firstName() }}</span></h1>
+      <p class="hero-sub">Hãy theo dõi sức khỏe của bạn mỗi ngày</p>
+    </div>
+    <a class="hero-btn" routerLink="/health-records">
+      <mat-icon>add</mat-icon> Thêm hồ sơ
+    </a>
+  </div>
+
+  <!-- Stats -->
+  <div class="stat-grid">
+    @for (s of stats(); track s.label) {
+      <a class="stat-card" [routerLink]="s.route">
+        <div class="stat-icon" [style.background]="s.lightBg">
+          <mat-icon [style.color]="s.fg">{{ s.icon }}</mat-icon>
+        </div>
+        <div>
+          <p class="stat-val" [style.color]="s.fg">{{ s.value }}</p>
+          <p class="stat-lbl">{{ s.label }}</p>
+        </div>
+      </a>
+    }
+  </div>
+
+  <!-- Grid -->
+  <div class="grid">
+
+    <!-- Hồ sơ -->
+    <div class="card">
+      <div class="card-head">
+        <div class="head-left">
+          <span class="head-dot blue-800"></span>
+          <h3>Hồ sơ sức khỏe</h3>
+        </div>
+        <a class="see-all" routerLink="/health-records">Xem tất cả →</a>
+      </div>
+      @if (recordsLoading()) {
+        <div class="card-loading"><mat-spinner diameter="28" /></div>
+      } @else if (records().length === 0) {
+        <div class="empty">
+          <mat-icon>person_outline</mat-icon>
+          <p>Chưa có hồ sơ nào</p>
+          <a class="cta-btn" routerLink="/health-records">Tạo hồ sơ đầu tiên</a>
+        </div>
+      } @else {
+        @for (r of records().slice(0,4); track r.id) {
+          <a class="row" [routerLink]="['/health-records', r.id]">
+            <div class="row-av blue">{{ r.profileName[0] }}</div>
+            <div class="row-info">
+              <span class="row-name">{{ r.profileName }}</span>
+              <span class="row-sub">{{ r.fullName }}</span>
+            </div>
+            @if (r.latestMetric?.bmi) {
+              <span class="tag blue">BMI {{ r.latestMetric?.bmi }}</span>
+            }
+          </a>
+        }
+      }
+    </div>
+
+    <!-- Tái khám -->
+    <div class="card">
+      <div class="card-head">
+        <div class="head-left">
+          <span class="head-dot blue-600"></span>
+          <h3>Lịch tái khám</h3>
+        </div>
+        <a class="see-all" routerLink="/medical-history">Xem tất cả →</a>
+      </div>
+      @if (followUpsLoading()) {
+        <div class="card-loading"><mat-spinner diameter="28" /></div>
+      } @else if (followUps().length === 0) {
+        <div class="empty">
+          <mat-icon>event_available</mat-icon>
+          <p>Không có lịch tái khám</p>
+        </div>
+      } @else {
+        @for (mh of followUps().slice(0,4); track mh.id) {
+          <div class="row">
+            <div class="row-ic blue-light"><mat-icon>calendar_today</mat-icon></div>
+            <div class="row-info">
+              <span class="row-name">{{ mh.hospital ?? 'Tái khám' }}</span>
+              <span class="row-sub">{{ mh.followUpDate | date:'dd/MM/yyyy' }}</span>
+            </div>
+            <span class="tag blue-soft">{{ daysUntil(mh.followUpDate!) }} ngày</span>
+          </div>
+        }
+      }
+    </div>
+
+    <!-- Vaccine -->
+    <div class="card">
+      <div class="card-head">
+        <div class="head-left">
+          <span class="head-dot red"></span>
+          <h3>Vaccine cần tiêm</h3>
+        </div>
+        <a class="see-all" routerLink="/vaccines">Xem tất cả →</a>
+      </div>
+      @if (vaccinesLoading()) {
+        <div class="card-loading"><mat-spinner diameter="28" /></div>
+      } @else if (overdueVaccines().length === 0) {
+        <div class="empty good">
+          <mat-icon>verified_user</mat-icon>
+          <p>Tất cả vaccine đều ổn</p>
+        </div>
+      } @else {
+        @for (v of overdueVaccines().slice(0,4); track v.id) {
+          <div class="row">
+            <div class="row-ic red-light"><mat-icon>warning_amber</mat-icon></div>
+            <div class="row-info">
+              <span class="row-name">{{ v.vaccineName }}</span>
+              <span class="row-sub">Mũi {{ v.doseNumber }}</span>
+            </div>
+            <span class="tag red">Quá hạn</span>
+          </div>
+        }
+      }
+    </div>
+
+    <!-- Nhắc nhở -->
+    <div class="card">
+      <div class="card-head">
+        <div class="head-left">
+          <span class="head-dot blue-500"></span>
+          <h3>Nhắc nhở sắp tới</h3>
+        </div>
+        <a class="see-all" routerLink="/reminders">Xem tất cả →</a>
+      </div>
+      @if (remindersLoading()) {
+        <div class="card-loading"><mat-spinner diameter="28" /></div>
+      } @else if (upcomingReminders().length === 0) {
+        <div class="empty">
+          <mat-icon>notifications_none</mat-icon>
+          <p>Không có nhắc nhở sắp tới</p>
+          <a class="cta-btn" routerLink="/reminders">Thêm nhắc nhở</a>
+        </div>
+      } @else {
+        @for (r of upcomingReminders().slice(0,4); track r.id) {
+          <div class="row">
+            <div class="row-ic blue-light"><mat-icon>alarm</mat-icon></div>
+            <div class="row-info">
+              <span class="row-name">{{ r.title }}</span>
+              <span class="row-sub">{{ r.remindAt | date:'HH:mm · dd/MM' }}</span>
+            </div>
+          </div>
+        }
+      }
+    </div>
+
+  </div>
+</div>

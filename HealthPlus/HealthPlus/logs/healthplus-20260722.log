@@ -1,0 +1,144 @@
+2026-07-22 00:29:24.404 +07:00 [INF] ReminderBackgroundService started.
+2026-07-22 00:29:24.829 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-22 00:29:40.193 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 3673.1080 ms
+2026-07-22 00:54:25.842 +07:00 [INF] HTTP OPTIONS /api/auth/login responded 204 in 30.4642 ms
+2026-07-22 00:54:26.949 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 1056.2632 ms
+2026-07-22 00:54:27.137 +07:00 [INF] HTTP OPTIONS /api/vaccines/overdue responded 204 in 1.2062 ms
+2026-07-22 00:54:27.138 +07:00 [INF] HTTP OPTIONS /api/health-records responded 204 in 2.5837 ms
+2026-07-22 00:54:27.142 +07:00 [INF] HTTP OPTIONS /api/medical-history/follow-ups responded 204 in 0.7825 ms
+2026-07-22 00:54:27.144 +07:00 [INF] HTTP OPTIONS /api/reminders/upcoming responded 204 in 0.5889 ms
+2026-07-22 00:54:27.936 +07:00 [INF] HTTP GET /api/reminders/upcoming responded 200 in 755.7345 ms
+2026-07-22 00:54:27.944 +07:00 [INF] HTTP GET /api/medical-history/follow-ups responded 200 in 765.3223 ms
+2026-07-22 00:54:27.991 +07:00 [INF] HTTP GET /api/vaccines/overdue responded 200 in 811.2324 ms
+2026-07-22 00:54:28.091 +07:00 [INF] HTTP GET /api/health-records responded 200 in 911.3378 ms
+2026-07-22 00:54:29.917 +07:00 [INF] HTTP GET /api/health-records responded 200 in 105.3715 ms
+2026-07-22 00:54:30.388 +07:00 [INF] HTTP OPTIONS /api/appointments responded 204 in 1.0140 ms
+2026-07-22 00:54:30.616 +07:00 [INF] HTTP GET /api/appointments responded 200 in 219.6593 ms
+2026-07-22 00:54:31.385 +07:00 [INF] HTTP OPTIONS /api/medical-history responded 204 in 0.5143 ms
+2026-07-22 00:54:31.467 +07:00 [INF] HTTP GET /api/medical-history/follow-ups responded 200 in 78.8611 ms
+2026-07-22 00:54:31.476 +07:00 [INF] HTTP GET /api/health-records responded 200 in 92.1932 ms
+2026-07-22 00:54:31.541 +07:00 [INF] HTTP GET /api/medical-history responded 200 in 135.4961 ms
+2026-07-22 00:54:32.749 +07:00 [INF] HTTP OPTIONS /api/reminders responded 204 in 1.9420 ms
+2026-07-22 00:54:32.749 +07:00 [INF] HTTP OPTIONS /api/reminders/upcoming responded 204 in 1.9047 ms
+2026-07-22 00:54:32.802 +07:00 [INF] HTTP GET /api/reminders/upcoming responded 200 in 34.0946 ms
+2026-07-22 00:54:32.835 +07:00 [INF] HTTP GET /api/reminders responded 200 in 67.2457 ms
+2026-07-22 00:54:35.479 +07:00 [INF] HTTP OPTIONS /api/auth/logout responded 204 in 7.2695 ms
+2026-07-22 00:54:35.618 +07:00 [INF] HTTP POST /api/auth/logout responded 200 in 124.8465 ms
+2026-07-22 01:00:55.996 +07:00 [INF] ReminderBackgroundService started.
+2026-07-22 01:00:56.517 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-22 01:01:05.863 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 3662.3557 ms
+2026-07-22 01:42:24.282 +07:00 [INF] ReminderBackgroundService started.
+2026-07-22 01:42:24.726 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-22 01:42:40.061 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 3665.3621 ms
+2026-07-22 01:50:24.382 +07:00 [INF] ReminderBackgroundService started.
+2026-07-22 01:50:24.868 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-22 01:50:40.225 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 3853.6720 ms
+2026-07-22 01:56:20.814 +07:00 [INF] ReminderBackgroundService started.
+2026-07-22 01:56:21.180 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-22 01:56:35.336 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 3538.1858 ms
+2026-07-22 02:05:17.479 +07:00 [INF] ReminderBackgroundService started.
+2026-07-22 02:05:17.870 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-22 02:05:36.074 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 3197.1603 ms
+2026-07-22 02:31:31.031 +07:00 [INF] Đã seed 4 bệnh viện (tên hư cấu) và gán chuyên khoa/phí tư vấn cho bác sĩ demo
+2026-07-22 02:31:31.507 +07:00 [INF] ReminderBackgroundService started.
+2026-07-22 02:31:31.785 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-22 02:31:38.497 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 2287.7808 ms
+2026-07-22 02:32:00.769 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 695.4651 ms
+2026-07-22 02:32:01.154 +07:00 [INF] HTTP GET /api/hospitals responded 200 in 223.7173 ms
+2026-07-22 02:32:01.494 +07:00 [INF] HTTP GET /api/appointments/doctors responded 200 in 237.0433 ms
+2026-07-22 02:32:16.878 +07:00 [INF] HTTP POST /api/appointments responded 200 in 371.6716 ms
+2026-07-22 02:32:17.523 +07:00 [INF] HTTP POST /api/payments/1a200e4d-6930-4f88-99cb-b890130a2cfa/pay responded 200 in 267.5407 ms
+2026-07-22 02:32:17.726 +07:00 [INF] HTTP GET /api/payments/my responded 200 in 110.3949 ms
+2026-07-22 02:32:17.847 +07:00 [INF] HTTP POST /api/payments/1a200e4d-6930-4f88-99cb-b890130a2cfa/pay responded 409 in 29.9074 ms
+2026-07-22 02:32:30.107 +07:00 [INF] HTTP POST /api/aichat/messages responded 404 in 4.7006 ms
+2026-07-22 02:32:30.205 +07:00 [INF] HTTP GET /api/aichat/conversations responded 404 in 2.6240 ms
+2026-07-22 02:32:45.947 +07:00 [INF] HTTP POST /api/aichat/messages responded 404 in 7.1825 ms
+2026-07-22 02:33:09.082 +07:00 [INF] HTTP POST /api/AiChat/messages responded 404 in 4.8855 ms
+2026-07-22 02:33:09.314 +07:00 [INF] HTTP GET /api/Payments/my responded 200 in 125.5988 ms
+2026-07-22 02:34:56.766 +07:00 [INF] ReminderBackgroundService started.
+2026-07-22 02:34:57.159 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-22 02:35:02.728 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 2758.0557 ms
+2026-07-22 02:35:48.635 +07:00 [WRN] [AiChat] Chưa cấu hình API key (appsettings:AiChat:ApiKey).
+2026-07-22 02:35:48.676 +07:00 [INF] HTTP POST /api/ai-chat/messages responded 200 in 542.2690 ms
+2026-07-22 02:35:59.948 +07:00 [INF] HTTP GET /api/ai-chat/conversations responded 200 in 132.6995 ms
+2026-07-22 02:36:00.578 +07:00 [INF] HTTP GET /api/ai-chat/conversations/c7c703e5-df48-4e12-adb1-2eeb3b61d4ce/messages responded 200 in 164.2099 ms
+2026-07-22 02:58:15.920 +07:00 [INF] ReminderBackgroundService started.
+2026-07-22 02:58:16.298 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-22 02:58:40.884 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 2770.1816 ms
+2026-07-22 02:58:41.104 +07:00 [INF] HTTP GET /api/hospitals responded 401 in 34.5443 ms
+2026-07-22 02:58:41.219 +07:00 [INF] HTTP GET /api/payments/my responded 401 in 8.9694 ms
+2026-07-22 02:58:41.352 +07:00 [INF] HTTP POST /api/ai-chat/messages responded 401 in 6.9730 ms
+2026-07-22 02:58:46.528 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 616.1638 ms
+2026-07-22 02:58:54.112 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 625.1903 ms
+2026-07-22 02:58:54.424 +07:00 [INF] HTTP GET /api/hospitals responded 200 in 180.9383 ms
+2026-07-22 02:58:54.731 +07:00 [INF] HTTP GET /api/payments/my responded 200 in 183.5580 ms
+2026-07-22 02:58:54.954 +07:00 [INF] HTTP POST /api/ai-chat/messages responded 400 in 105.6365 ms
+2026-07-22 02:59:53.272 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 672.9729 ms
+2026-07-22 02:59:53.690 +07:00 [WRN] [AiChat] Chưa cấu hình API key (appsettings:AiChat:ApiKey).
+2026-07-22 02:59:53.727 +07:00 [INF] HTTP POST /api/ai-chat/messages responded 200 in 325.5085 ms
+2026-07-22 02:59:53.860 +07:00 [WRN] [AiChat] Chưa cấu hình API key (appsettings:AiChat:ApiKey).
+2026-07-22 02:59:53.879 +07:00 [INF] HTTP POST /api/ai-chat/messages responded 200 in 52.6073 ms
+2026-07-22 03:17:44.707 +07:00 [INF] ReminderBackgroundService started.
+2026-07-22 03:17:45.084 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-22 03:18:04.899 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 3371.1938 ms
+2026-07-22 03:21:23.517 +07:00 [INF] HTTP OPTIONS /api/auth/login responded 204 in 17.4033 ms
+2026-07-22 03:21:24.307 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 753.1520 ms
+2026-07-22 03:21:24.577 +07:00 [INF] HTTP OPTIONS /api/health-records responded 204 in 5.6950 ms
+2026-07-22 03:21:24.578 +07:00 [INF] HTTP OPTIONS /api/medical-history/follow-ups responded 204 in 3.8411 ms
+2026-07-22 03:21:24.578 +07:00 [INF] HTTP OPTIONS /api/vaccines/overdue responded 204 in 6.0770 ms
+2026-07-22 03:21:24.577 +07:00 [INF] HTTP OPTIONS /api/reminders/upcoming responded 204 in 2.4390 ms
+2026-07-22 03:21:25.270 +07:00 [INF] HTTP GET /api/medical-history/follow-ups responded 200 in 671.5938 ms
+2026-07-22 03:21:25.288 +07:00 [INF] HTTP GET /api/vaccines/overdue responded 200 in 689.7838 ms
+2026-07-22 03:21:25.489 +07:00 [INF] HTTP GET /api/reminders/upcoming responded 200 in 891.3015 ms
+2026-07-22 03:21:25.579 +07:00 [INF] HTTP GET /api/health-records responded 200 in 980.9759 ms
+2026-07-22 03:21:27.746 +07:00 [INF] HTTP GET /api/health-records responded 200 in 115.0710 ms
+2026-07-22 03:21:28.505 +07:00 [INF] HTTP OPTIONS /api/appointments responded 204 in 0.9005 ms
+2026-07-22 03:21:28.807 +07:00 [INF] HTTP GET /api/appointments responded 200 in 278.3363 ms
+2026-07-22 03:21:31.402 +07:00 [INF] HTTP OPTIONS /api/vaccines responded 204 in 0.8934 ms
+2026-07-22 03:21:31.401 +07:00 [INF] HTTP OPTIONS /api/health-records responded 204 in 0.8396 ms
+2026-07-22 03:21:31.403 +07:00 [INF] HTTP OPTIONS /api/vaccines/overdue responded 204 in 0.8339 ms
+2026-07-22 03:21:31.522 +07:00 [INF] HTTP GET /api/vaccines/overdue responded 200 in 103.6069 ms
+2026-07-22 03:21:31.530 +07:00 [INF] HTTP GET /api/health-records responded 200 in 114.7075 ms
+2026-07-22 03:21:31.605 +07:00 [INF] HTTP GET /api/vaccines responded 200 in 189.2304 ms
+2026-07-22 03:21:33.257 +07:00 [INF] HTTP OPTIONS /api/prescriptions responded 204 in 2.1142 ms
+2026-07-22 03:21:33.421 +07:00 [INF] HTTP GET /api/prescriptions responded 200 in 142.0783 ms
+2026-07-22 03:21:34.492 +07:00 [INF] HTTP OPTIONS /api/reminders/upcoming responded 204 in 0.7241 ms
+2026-07-22 03:21:34.494 +07:00 [INF] HTTP OPTIONS /api/reminders responded 204 in 2.3628 ms
+2026-07-22 03:21:34.637 +07:00 [INF] HTTP GET /api/reminders/upcoming responded 200 in 130.7084 ms
+2026-07-22 03:21:34.674 +07:00 [INF] HTTP GET /api/reminders responded 200 in 167.7798 ms
+2026-07-22 03:21:36.544 +07:00 [INF] HTTP OPTIONS /api/ai-chat/messages responded 204 in 2.9733 ms
+2026-07-22 03:21:36.887 +07:00 [WRN] [AiChat] Chưa cấu hình API key (appsettings:AiChat:ApiKey).
+2026-07-22 03:21:36.919 +07:00 [INF] HTTP POST /api/ai-chat/messages responded 200 in 363.1997 ms
+2026-07-22 03:21:41.254 +07:00 [INF] HTTP OPTIONS /api/payments/my responded 204 in 4.4620 ms
+2026-07-22 03:21:41.438 +07:00 [INF] HTTP GET /api/payments/my responded 200 in 174.7925 ms
+2026-07-22 03:21:43.546 +07:00 [INF] HTTP OPTIONS /api/reminders responded 204 in 0.7173 ms
+2026-07-22 03:21:43.546 +07:00 [INF] HTTP OPTIONS /api/reminders/upcoming responded 204 in 2.5185 ms
+2026-07-22 03:21:43.593 +07:00 [INF] HTTP GET /api/reminders/upcoming responded 200 in 27.0337 ms
+2026-07-22 03:21:43.595 +07:00 [INF] HTTP GET /api/reminders responded 200 in 28.5771 ms
+2026-07-22 03:21:44.098 +07:00 [INF] HTTP OPTIONS /api/prescriptions responded 204 in 1.9443 ms
+2026-07-22 03:21:44.128 +07:00 [INF] HTTP GET /api/prescriptions responded 200 in 21.6858 ms
+2026-07-22 03:21:44.671 +07:00 [INF] HTTP OPTIONS /api/health-records responded 204 in 2.2851 ms
+2026-07-22 03:21:44.671 +07:00 [INF] HTTP OPTIONS /api/vaccines responded 204 in 3.0856 ms
+2026-07-22 03:21:44.672 +07:00 [INF] HTTP OPTIONS /api/vaccines/overdue responded 204 in 2.4627 ms
+2026-07-22 03:21:44.710 +07:00 [INF] HTTP GET /api/vaccines responded 200 in 32.5015 ms
+2026-07-22 03:21:44.711 +07:00 [INF] HTTP GET /api/vaccines/overdue responded 200 in 32.1545 ms
+2026-07-22 03:21:44.716 +07:00 [INF] HTTP GET /api/health-records responded 200 in 39.2059 ms
+2026-07-22 03:21:45.279 +07:00 [INF] HTTP OPTIONS /api/medical-history/follow-ups responded 204 in 1.2653 ms
+2026-07-22 03:21:45.281 +07:00 [INF] HTTP OPTIONS /api/medical-history responded 204 in 0.8733 ms
+2026-07-22 03:21:45.330 +07:00 [INF] HTTP GET /api/medical-history/follow-ups responded 200 in 26.1888 ms
+2026-07-22 03:21:45.332 +07:00 [INF] HTTP GET /api/health-records responded 200 in 50.4565 ms
+2026-07-22 03:21:45.375 +07:00 [INF] HTTP GET /api/medical-history responded 200 in 71.3635 ms
+2026-07-22 03:21:45.755 +07:00 [INF] HTTP OPTIONS /api/appointments responded 204 in 0.5469 ms
+2026-07-22 03:21:45.797 +07:00 [INF] HTTP GET /api/appointments responded 200 in 37.9005 ms
+2026-07-22 03:21:46.362 +07:00 [INF] HTTP GET /api/health-records responded 200 in 61.2390 ms
+2026-07-22 03:21:46.806 +07:00 [INF] HTTP OPTIONS /api/reminders/upcoming responded 204 in 0.2051 ms
+2026-07-22 03:21:46.873 +07:00 [INF] HTTP GET /api/reminders/upcoming responded 200 in 53.6917 ms
+2026-07-22 03:21:46.873 +07:00 [INF] HTTP GET /api/vaccines/overdue responded 200 in 59.4948 ms
+2026-07-22 03:21:46.873 +07:00 [INF] HTTP GET /api/medical-history/follow-ups responded 200 in 65.2683 ms
+2026-07-22 03:21:46.883 +07:00 [INF] HTTP GET /api/health-records responded 200 in 76.0995 ms
+2026-07-22 03:21:51.434 +07:00 [INF] HTTP OPTIONS /api/health-records responded 204 in 0.4835 ms
+2026-07-22 03:21:51.483 +07:00 [INF] HTTP GET /api/health-records responded 200 in 41.1764 ms
+2026-07-22 03:21:53.034 +07:00 [INF] HTTP OPTIONS /api/auth/logout responded 204 in 0.5204 ms
+2026-07-22 03:21:53.218 +07:00 [INF] HTTP POST /api/auth/logout responded 200 in 177.8915 ms
+2026-07-22 05:21:49.548 +07:00 [WRN] As of ""2026-07-21T22:21:45.3950847+00:00"", the heartbeat has been running for ""00:00:01.4989795"" which is longer than ""00:00:01"". This could be caused by thread pool starvation.
+2026-07-22 16:39:44.736 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 1535.4109 ms

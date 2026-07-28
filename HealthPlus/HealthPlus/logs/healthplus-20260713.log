@@ -1,0 +1,34 @@
+2026-07-13 05:07:12.244 +07:00 [INF] ReminderBackgroundService started.
+2026-07-13 05:07:13.457 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-13 06:00:37.448 +07:00 [INF] ReminderBackgroundService started.
+2026-07-13 06:00:40.723 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-13 06:14:18.242 +07:00 [INF] HTTP POST /api/auth/register responded 200 in 2663.9604 ms
+2026-07-13 06:15:04.215 +07:00 [INF] HTTP POST /api/prescriptions responded 401 in 38.7582 ms
+2026-07-13 06:15:10.785 +07:00 [INF] HTTP POST /api/prescriptions responded 401 in 13.8600 ms
+2026-07-13 06:16:06.823 +07:00 [INF] HTTP POST /api/prescriptions responded 201 in 472.7742 ms
+2026-07-13 06:16:30.150 +07:00 [INF] File saved: prescriptions/0fce6fec-72bc-47c6-a627-740034878e13.png
+2026-07-13 06:16:31.434 +07:00 [INF] HTTP POST /api/prescriptions/be62d88b-da66-4ba5-bd7e-bfe3ea5c08d4/upload-image responded 200 in 1608.0862 ms
+2026-07-13 06:17:57.211 +07:00 [INF] ReminderBackgroundService started.
+2026-07-13 06:18:00.015 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-13 06:18:32.314 +07:00 [INF] HTTP POST /api/prescriptions responded 201 in 1809.9962 ms
+2026-07-13 06:18:32.817 +07:00 [INF] File saved: prescriptions/f3a168f7-26ef-4aa7-8514-68fb26c38c76.png
+2026-07-13 06:18:33.723 +07:00 [INF] HTTP POST /api/prescriptions/cfdb98c6-ecbc-44e4-b948-ca503b53d16a/upload-image responded 200 in 1247.1012 ms
+2026-07-13 06:19:01.846 +07:00 [INF] HTTP DELETE /api/prescriptions/be62d88b-da66-4ba5-bd7e-bfe3ea5c08d4 responded 200 in 254.8792 ms
+2026-07-13 06:19:01.951 +07:00 [INF] HTTP DELETE /api/prescriptions/cfdb98c6-ecbc-44e4-b948-ca503b53d16a responded 200 in 24.1195 ms
+2026-07-13 07:27:42.797 +07:00 [INF] ReminderBackgroundService started.
+2026-07-13 07:27:45.668 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-13 07:28:12.651 +07:00 [INF] HTTP POST /api/auth/register responded 200 in 2290.3620 ms
+2026-07-13 07:28:13.500 +07:00 [INF] HTTP GET /api/users/me responded 200 in 509.5560 ms
+2026-07-13 07:28:21.268 +07:00 [INF] HTTP PUT /api/users/me responded 200 in 212.0448 ms
+2026-07-13 07:28:21.400 +07:00 [INF] HTTP PUT /api/users/me/password responded 400 in 44.7727 ms
+2026-07-13 07:28:21.923 +07:00 [INF] HTTP PUT /api/users/me/password responded 400 in 442.8244 ms
+2026-07-13 07:28:22.870 +07:00 [INF] HTTP PUT /api/users/me/password responded 200 in 865.4108 ms
+2026-07-13 07:32:29.334 +07:00 [INF] File saved: avatars/19652503-7ec0-43d9-8910-a521c89542d0.png
+2026-07-13 07:32:29.450 +07:00 [INF] HTTP POST /api/users/me/avatar responded 200 in 221.7794 ms
+2026-07-13 07:32:29.586 +07:00 [INF] HTTP GET /api/users/me responded 200 in 44.8988 ms
+2026-07-13 07:53:35.173 +07:00 [INF] ReminderBackgroundService started.
+2026-07-13 07:53:35.962 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-13 08:45:09.895 +07:00 [INF] ReminderBackgroundService started.
+2026-07-13 08:45:10.820 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-07-13 09:11:54.260 +07:00 [INF] ReminderBackgroundService started.
+2026-07-13 09:11:55.065 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.

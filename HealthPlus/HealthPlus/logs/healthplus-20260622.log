@@ -1,0 +1,113 @@
+2026-06-22 14:47:52.245 +07:00 [INF] ReminderBackgroundService started.
+2026-06-22 14:48:17.081 +07:00 [WRN] The WebRootPath was not found: C:\HealthPlus\HealthPlus\HealthPlus\wwwroot. Static files may be unavailable.
+2026-06-22 15:47:37.928 +07:00 [INF] HTTP OPTIONS /api/auth/login responded 204 in 91.2180 ms
+2026-06-22 15:47:43.073 +07:00 [INF] HTTP POST /api/auth/login responded 200 in 4991.2173 ms
+2026-06-22 15:47:43.285 +07:00 [INF] HTTP OPTIONS /api/health-records responded 204 in 1.3359 ms
+2026-06-22 15:47:43.285 +07:00 [INF] HTTP OPTIONS /api/vaccines/overdue responded 204 in 1.0302 ms
+2026-06-22 15:47:43.295 +07:00 [INF] HTTP OPTIONS /api/medical-history/follow-ups responded 204 in 0.1140 ms
+2026-06-22 15:47:43.295 +07:00 [INF] HTTP OPTIONS /api/reminders/upcoming responded 204 in 0.0406 ms
+2026-06-22 15:47:43.626 +07:00 [INF] HTTP GET /api/health-records responded 200 in 275.1491 ms
+2026-06-22 15:47:43.662 +07:00 [INF] HTTP GET /api/vaccines/overdue responded 200 in 308.9709 ms
+2026-06-22 15:47:44.079 +07:00 [INF] HTTP GET /api/medical-history/follow-ups responded 200 in 711.0746 ms
+2026-06-22 15:47:44.170 +07:00 [INF] HTTP GET /api/reminders/upcoming responded 200 in 778.8562 ms
+2026-06-22 15:47:53.540 +07:00 [INF] HTTP OPTIONS /api/health-records responded 204 in 1.4816 ms
+2026-06-22 15:47:53.617 +07:00 [INF] HTTP GET /api/health-records responded 200 in 65.6680 ms
+2026-06-22 15:47:54.399 +07:00 [INF] HTTP OPTIONS /api/medical-history/follow-ups responded 204 in 0.0850 ms
+2026-06-22 15:47:54.401 +07:00 [INF] HTTP OPTIONS /api/reminders/upcoming responded 204 in 0.2693 ms
+2026-06-22 15:47:54.400 +07:00 [INF] HTTP OPTIONS /api/vaccines/overdue responded 204 in 0.0800 ms
+2026-06-22 15:47:54.441 +07:00 [INF] HTTP GET /api/health-records responded 200 in 38.7470 ms
+2026-06-22 15:47:54.461 +07:00 [INF] HTTP GET /api/reminders/upcoming responded 200 in 35.0787 ms
+2026-06-22 15:47:54.489 +07:00 [INF] HTTP GET /api/medical-history/follow-ups responded 200 in 70.4513 ms
+2026-06-22 15:47:54.490 +07:00 [INF] HTTP GET /api/vaccines/overdue responded 200 in 49.4679 ms
+2026-06-22 15:47:55.398 +07:00 [INF] HTTP GET /api/health-records responded 200 in 21.7536 ms
+2026-06-22 15:47:55.993 +07:00 [INF] HTTP OPTIONS /api/medical-history responded 204 in 0.3435 ms
+2026-06-22 15:47:56.042 +07:00 [INF] HTTP GET /api/health-records responded 200 in 50.0529 ms
+2026-06-22 15:47:56.042 +07:00 [INF] HTTP GET /api/medical-history/follow-ups responded 200 in 48.4894 ms
+2026-06-22 15:47:56.106 +07:00 [INF] HTTP GET /api/medical-history responded 200 in 64.1725 ms
+2026-06-22 15:47:56.870 +07:00 [INF] HTTP OPTIONS /api/vaccines responded 204 in 0.4875 ms
+2026-06-22 15:47:56.894 +07:00 [INF] HTTP GET /api/health-records responded 200 in 24.2735 ms
+2026-06-22 15:47:56.900 +07:00 [INF] HTTP GET /api/vaccines/overdue responded 200 in 28.9362 ms
+2026-06-22 15:47:56.946 +07:00 [INF] HTTP GET /api/vaccines responded 200 in 42.7426 ms
+2026-06-22 15:47:57.438 +07:00 [INF] HTTP OPTIONS /api/prescriptions responded 204 in 0.0651 ms
+2026-06-22 15:47:57.524 +07:00 [INF] HTTP GET /api/prescriptions responded 200 in 62.6092 ms
+2026-06-22 15:47:57.964 +07:00 [INF] HTTP OPTIONS /api/reminders responded 204 in 0.1125 ms
+2026-06-22 15:47:58.023 +07:00 [INF] HTTP GET /api/reminders/upcoming responded 200 in 57.9681 ms
+2026-06-22 15:47:58.023 +07:00 [INF] HTTP GET /api/reminders responded 200 in 44.9377 ms
+2026-06-22 15:47:58.656 +07:00 [INF] HTTP GET /api/prescriptions responded 200 in 82.4824 ms
+2026-06-22 15:47:59.416 +07:00 [INF] HTTP OPTIONS /api/health-records responded 204 in 0.2150 ms
+2026-06-22 15:47:59.469 +07:00 [INF] HTTP GET /api/vaccines/overdue responded 200 in 50.9638 ms
+2026-06-22 15:47:59.469 +07:00 [INF] HTTP GET /api/vaccines responded 200 in 52.6244 ms
+2026-06-22 15:47:59.532 +07:00 [INF] HTTP GET /api/health-records responded 200 in 39.5986 ms
+2026-06-22 15:48:00.030 +07:00 [INF] HTTP OPTIONS /api/medical-history/follow-ups responded 204 in 2.6121 ms
+2026-06-22 15:48:00.075 +07:00 [INF] HTTP GET /api/health-records responded 200 in 45.7895 ms
+2026-06-22 15:48:00.093 +07:00 [INF] HTTP GET /api/medical-history responded 200 in 64.5061 ms
+2026-06-22 15:48:00.111 +07:00 [INF] HTTP GET /api/medical-history/follow-ups responded 200 in 20.8742 ms
+2026-06-22 15:48:01.598 +07:00 [INF] HTTP GET /api/health-records responded 200 in 21.6142 ms
+2026-06-22 15:48:03.270 +07:00 [INF] HTTP OPTIONS /api/reminders/upcoming responded 204 in 0.7255 ms
+2026-06-22 15:48:03.270 +07:00 [INF] HTTP OPTIONS /api/vaccines/overdue responded 204 in 0.0507 ms
+2026-06-22 15:48:03.296 +07:00 [INF] HTTP GET /api/health-records responded 200 in 26.6509 ms
+2026-06-22 15:48:03.296 +07:00 [INF] HTTP GET /api/medical-history/follow-ups responded 200 in 25.9723 ms
+2026-06-22 15:48:03.327 +07:00 [INF] HTTP GET /api/vaccines/overdue responded 200 in 32.1214 ms
+2026-06-22 15:48:03.347 +07:00 [INF] HTTP GET /api/reminders/upcoming responded 200 in 59.2469 ms
+2026-06-22 15:48:05.173 +07:00 [INF] HTTP OPTIONS /api/health-records responded 204 in 0.1062 ms
+2026-06-22 15:48:05.206 +07:00 [INF] HTTP GET /api/health-records responded 200 in 12.6409 ms
+2026-06-22 15:48:07.040 +07:00 [INF] HTTP OPTIONS /api/medical-history/follow-ups responded 204 in 0.0300 ms
+2026-06-22 15:48:07.072 +07:00 [INF] HTTP GET /api/health-records responded 200 in 32.5627 ms
+2026-06-22 15:48:07.073 +07:00 [INF] HTTP GET /api/vaccines/overdue responded 200 in 32.3361 ms
+2026-06-22 15:48:07.122 +07:00 [INF] HTTP GET /api/reminders/upcoming responded 200 in 66.3868 ms
+2026-06-22 15:48:07.129 +07:00 [INF] HTTP GET /api/medical-history/follow-ups responded 200 in 38.1408 ms
+2026-06-22 15:48:09.637 +07:00 [INF] HTTP OPTIONS /api/auth/logout responded 204 in 0.8601 ms
+2026-06-22 15:48:09.791 +07:00 [INF] HTTP POST /api/auth/logout responded 200 in 146.6663 ms
+2026-06-22 15:55:16.304 +07:00 [ERR] Failed executing DbCommand (372ms) [Parameters=[@__now_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Channel], [r].[CreatedAt], [r].[IsEnabled], [r].[IsSent], [r].[Message], [r].[RelatedEntityId], [r].[RelatedEntityType], [r].[RemindAt], [r].[ReminderType], [r].[RepeatType], [r].[RepeatUntil], [r].[SentAt], [r].[Title], [r].[UserId]
+FROM [Reminders] AS [r]
+WHERE [r].[IsEnabled] = CAST(1 AS bit) AND [r].[IsSent] = CAST(0 AS bit) AND [r].[RemindAt] <= @__now_0
+2026-06-22 15:55:16.838 +07:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HealthPlus.Persistence.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: Session Provider, error: 19 - Physical connection is not usable)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:f82dbd9b-3c4c-4cbd-955d-391c3d7b6516
+Error Number:-1,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: Session Provider, error: 19 - Physical connection is not usable)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:f82dbd9b-3c4c-4cbd-955d-391c3d7b6516
+Error Number:-1,State:0,Class:20
+2026-06-22 15:55:17.767 +07:00 [ERR] Error processing reminders.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: Session Provider, error: 19 - Physical connection is not usable)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at HealthPlus.Persistence.Repositories.GenericRepository`1.FindAsync(Expression`1 predicate, CancellationToken cancellationToken) in C:\HealthPlus\HealthPlus\HealthPlus.Persistence\Repositories\GenericRepository.cs:line 25
+   at HealthPlus.Infrastructure.BackgroundServices.ReminderBackgroundService.ProcessDueRemindersAsync(CancellationToken ct) in C:\HealthPlus\HealthPlus\HealthPlus.Infrastructure\BackgroundServices\ReminderBackgroundService.cs:line 48
+   at HealthPlus.Infrastructure.BackgroundServices.ReminderBackgroundService.ExecuteAsync(CancellationToken stoppingToken) in C:\HealthPlus\HealthPlus\HealthPlus.Infrastructure\BackgroundServices\ReminderBackgroundService.cs:line 30
+ClientConnectionId:f82dbd9b-3c4c-4cbd-955d-391c3d7b6516
+Error Number:-1,State:0,Class:20

@@ -1,0 +1,505 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\HealthPlus\\HealthPlus\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{70FF7DD7-CD4B-47D5-96C0-114612CE7BA9}|HealthPlus\\HealthPlus.csproj|c:\\healthplus\\healthplus\\healthplus\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{70FF7DD7-CD4B-47D5-96C0-114612CE7BA9}|HealthPlus\\HealthPlus.csproj|solutionrelative:healthplus\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70FF7DD7-CD4B-47D5-96C0-114612CE7BA9}|HealthPlus\\HealthPlus.csproj|c:\\healthplus\\healthplus\\healthplus\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70FF7DD7-CD4B-47D5-96C0-114612CE7BA9}|HealthPlus\\HealthPlus.csproj|solutionrelative:healthplus\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\enums\\prescriptionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\enums\\prescriptionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\enums\\remindertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\enums\\remindertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\enums\\reminderchannel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\enums\\reminderchannel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\interfaces\\repositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\interfaces\\repositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\interfaces\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\interfaces\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\enums\\bloodtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\enums\\bloodtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\healthrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\healthrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\common\\auditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\common\\auditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\healthplus.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\healthplus.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\usernotificationsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\usernotificationsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\reminderlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\reminderlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\reminder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\reminder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\vaccinescheduletemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\vaccinescheduletemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\vaccine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\vaccine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\prescriptionitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\prescriptionitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\medicaldocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\medicaldocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\medicalhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\medicalhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\healthmetric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\healthmetric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|c:\\healthplus\\healthplus\\healthplus.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{188B810D-7870-446F-A26C-7C8A18515992}|HealthPlus.Domain\\HealthPlus.Domain.csproj|solutionrelative:healthplus.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus\\appsettings.json",
+              "RelativeDocumentMoniker": "HealthPlus\\appsettings.json",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus\\appsettings.json",
+              "RelativeToolTip": "HealthPlus\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-08T11:21:11.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus\\Program.cs",
+              "RelativeDocumentMoniker": "HealthPlus\\Program.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus\\Program.cs",
+              "RelativeToolTip": "HealthPlus\\Program.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T11:20:36.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Gender.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Enums\\Gender.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Enums\\Gender.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Enums\\Gender.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Enums\\Gender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:51:58.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReminderChannel.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Enums\\ReminderChannel.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Enums\\ReminderChannel.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Enums\\ReminderChannel.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Enums\\ReminderChannel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:52:29.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReminderType.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Enums\\ReminderType.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Enums\\ReminderType.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Enums\\ReminderType.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Enums\\ReminderType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:52:19.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PrescriptionStatus.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Enums\\PrescriptionStatus.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Enums\\PrescriptionStatus.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Enums\\PrescriptionStatus.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Enums\\PrescriptionStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:52:42.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:53:23.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Interfaces\\Repositories\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Interfaces\\Repositories\\IUnitOfWork.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Interfaces\\Repositories\\IUnitOfWork.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Interfaces\\Repositories\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:53:32.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BloodType.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Enums\\BloodType.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Enums\\BloodType.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Enums\\BloodType.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Enums\\BloodType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:52:09.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HealthRecord.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\HealthRecord.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\HealthRecord.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\HealthRecord.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\HealthRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:49:23.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:47:52.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AuditableEntity.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Common\\AuditableEntity.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Common\\AuditableEntity.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Common\\AuditableEntity.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Common\\AuditableEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:47:34.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Common\\BaseEntity.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Common\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:47:22.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuditLog.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\AuditLog.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\AuditLog.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\AuditLog.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\AuditLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:51:21.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HealthPlus.Domain.csproj",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\HealthPlus.Domain.csproj",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\HealthPlus.Domain.csproj",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\HealthPlus.Domain.csproj",
+              "RelativeToolTip": "HealthPlus.Domain\\HealthPlus.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-05T11:45:58.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserNotificationSetting.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\UserNotificationSetting.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\UserNotificationSetting.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\UserNotificationSetting.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\UserNotificationSetting.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:51:13.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ReminderLog.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\ReminderLog.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\ReminderLog.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\ReminderLog.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\ReminderLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:51:04.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Reminder.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\Reminder.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\Reminder.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\Reminder.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\Reminder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:50:53.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "VaccineScheduleTemplate.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\VaccineScheduleTemplate.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\VaccineScheduleTemplate.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\VaccineScheduleTemplate.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\VaccineScheduleTemplate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:50:44.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Vaccine.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\Vaccine.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\Vaccine.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\Vaccine.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\Vaccine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:50:35.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PrescriptionItem.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\PrescriptionItem.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\PrescriptionItem.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\PrescriptionItem.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\PrescriptionItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:50:24.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Prescription.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\Prescription.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\Prescription.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\Prescription.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\Prescription.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:50:15.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MedicalDocument.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\MedicalDocument.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\MedicalDocument.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\MedicalDocument.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\MedicalDocument.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:50:05.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MedicalHistory.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\MedicalHistory.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\MedicalHistory.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\MedicalHistory.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\MedicalHistory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:49:56.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "HealthMetric.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\HealthMetric.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\HealthMetric.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\HealthMetric.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\HealthMetric.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:49:32.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "RefreshToken.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\RefreshToken.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\RefreshToken.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\RefreshToken.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\RefreshToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:49:13.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "RolePermission.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\RolePermission.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\RolePermission.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\RolePermission.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\RolePermission.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:49:04.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\UserRole.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\UserRole.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\UserRole.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:48:55.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Permission.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\Permission.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\Permission.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\Permission.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\Permission.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:48:46.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\Role.cs",
+              "RelativeDocumentMoniker": "HealthPlus.Domain\\Entities\\Role.cs",
+              "ToolTip": "C:\\HealthPlus\\HealthPlus\\HealthPlus.Domain\\Entities\\Role.cs",
+              "RelativeToolTip": "HealthPlus.Domain\\Entities\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T11:48:03.159Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
