@@ -67,7 +67,7 @@
   transition: border-color 0.2s, box-shadow 0.2s;
   &:hover { box-shadow: var(--hp-shadow); border-color: var(--hp-primary-light, #BBDEFB); }
   &.disabled { background: #FAFAFA; opacity: 0.7; }
-  &.sent { background: #F9FBE7; }
+  &.sent { background: #E3F2FD; }
 }
 
 /* Type icon */
@@ -87,8 +87,8 @@
 .reminder-title { font-size: 14px; font-weight: 600; color: var(--hp-text-primary); }
 .sent-badge {
   display: inline-flex; align-items: center; gap: 3px;
-  padding: 1px 8px; background: #F1F8E9; border: 1px solid #C5E1A5;
-  border-radius: 20px; font-size: 11px; color: #558B2F; font-weight: 600;
+  padding: 1px 8px; background: #BBDEFB; border: 1px solid #90CAF9;
+  border-radius: 20px; font-size: 11px; color: #0D47A1; font-weight: 600;
   mat-icon { font-size: 12px; width: 12px; height: 12px; }
 }
 .disabled-badge {
