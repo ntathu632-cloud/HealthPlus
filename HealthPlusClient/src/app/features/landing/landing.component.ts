@@ -79,7 +79,6 @@ export class LandingComponent implements AfterViewInit {
     { icon: 'medication', color: '#1976D2', title: 'Đơn thuốc & nhận diện tự động', desc: 'Chụp ảnh đơn thuốc, hệ thống tự nhận diện tên thuốc và liều dùng.' },
     { icon: 'vaccines', color: '#1976D2', title: 'Theo dõi tiêm chủng', desc: 'Quản lý lịch tiêm theo từng mũi, cảnh báo khi quá hạn.' },
     { icon: 'notifications_active', color: '#1976D2', title: 'Nhắc nhở thông minh', desc: 'Không bỏ lỡ lịch uống thuốc, lịch tiêm chủng hay lịch tái khám.' },
-    { icon: 'verified_user', color: '#1976D2', title: 'Bảo mật & phân quyền', desc: 'Dữ liệu chỉ hiển thị đúng người có quyền — bác sĩ, bệnh nhân, quản trị viên.' },
   ];
 
   readonly steps: Step[] = [
