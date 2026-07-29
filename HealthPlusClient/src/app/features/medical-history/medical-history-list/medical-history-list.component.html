@@ -61,23 +61,10 @@
           <!-- Center: Info -->
           <div class="info-col">
             <div class="info-top">
-              <div class="info-top-text">
-                <span class="hospital">{{ item.hospital || 'Không rõ bệnh viện' }}</span>
-                @if (item.specialty) {
-                  <span class="specialty-chip">{{ item.specialty }}</span>
-                }
-              </div>
-              <div class="actions-row">
-                <button mat-icon-button (click)="openDetail(item)" matTooltip="Xem chi tiết">
-                  <mat-icon>visibility</mat-icon>
-                </button>
-                <button mat-icon-button (click)="openEdit(item)" matTooltip="Chỉnh sửa">
-                  <mat-icon>edit</mat-icon>
-                </button>
-                <button mat-icon-button class="del-btn" (click)="delete(item)" matTooltip="Xoá">
-                  <mat-icon>delete_outline</mat-icon>
-                </button>
-              </div>
+              <span class="hospital">{{ item.hospital || 'Không rõ bệnh viện' }}</span>
+              @if (item.specialty) {
+                <span class="specialty-chip">{{ item.specialty }}</span>
+              }
             </div>
             @if (item.doctorName) {
               <div class="doctor">
@@ -99,6 +86,19 @@
                 }
               </div>
             }
+          </div>
+
+          <!-- Right: Actions -->
+          <div class="actions-col">
+            <button mat-icon-button (click)="openDetail(item)" matTooltip="Xem chi tiết">
+              <mat-icon>visibility</mat-icon>
+            </button>
+            <button mat-icon-button (click)="openEdit(item)" matTooltip="Chỉnh sửa">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button class="del-btn" (click)="delete(item)" matTooltip="Xoá">
+              <mat-icon>delete_outline</mat-icon>
+            </button>
           </div>
         </mat-card>
       }
