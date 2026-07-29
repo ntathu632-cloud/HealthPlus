@@ -94,6 +94,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+// Form controls (button/input/select/textarea) không tự kế thừa font-family/font-size từ trang
+// theo mặc định của trình duyệt — khiến các <button> thường (không dùng mat-button) như
+// .status-tab, .social-btn... hiển thị sai font hệ thống, làm text/chiều cao lệch nhau khi đặt
+// cạnh nhau trong 1 hàng dù CSS canh hàng (flex) đã đúng.
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 // ── Bảng màu: Trắng chủ đạo · Xanh · Đỏ ─────────────────────────────────────
 :root {
   // Blues
