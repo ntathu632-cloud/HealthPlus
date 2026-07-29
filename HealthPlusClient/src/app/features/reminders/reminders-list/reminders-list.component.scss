@@ -67,7 +67,6 @@
   transition: border-color 0.2s, box-shadow 0.2s;
   &:hover { box-shadow: var(--hp-shadow); border-color: var(--hp-primary-light, #BBDEFB); }
   &.disabled { background: #FAFAFA; opacity: 0.7; }
-  &.sent { background: #E3F2FD; }
 }
 
 /* Type icon */
