@@ -32,7 +32,7 @@
 
 .list { display: flex; flex-direction: column; gap: 10px; }
 .row-card {
-  display: flex; align-items: stretch; gap: 12px; padding: 0 !important;
+  display: flex !important; flex-direction: row !important; align-items: stretch; gap: 12px; padding: 0 !important;
   border-radius: var(--hp-radius, 12px) !important; box-shadow: var(--hp-shadow) !important; overflow: hidden;
 }
 .status-bar {

@@ -17,7 +17,7 @@
   display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;
 }
 .patient-card {
-  display: flex; align-items: center; gap: 12px; padding: 16px !important;
+  display: flex !important; flex-direction: row !important; align-items: center; gap: 12px; padding: 16px !important;
   border-radius: var(--hp-radius, 12px) !important;
   box-shadow: var(--hp-shadow) !important;
   cursor: pointer; transition: box-shadow 0.2s, transform 0.2s;
