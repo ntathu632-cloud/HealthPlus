@@ -16,6 +16,7 @@ public class AppointmentResponse
     public decimal Fee { get; set; }
     public bool IsPaid { get; set; }
     public DateTime CreatedAt { get; set; }
+    public string VideoRoomUrl { get; set; } = string.Empty;
 }
 
 public class DoctorListItemResponse

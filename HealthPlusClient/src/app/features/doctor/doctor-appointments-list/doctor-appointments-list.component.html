@@ -50,6 +50,11 @@
               </button>
             }
             @if (a.status === 'Confirmed') {
+              @if (a.isPaid) {
+                <a mat-raised-button color="primary" [href]="a.videoRoomUrl" target="_blank" rel="noopener">
+                  <mat-icon>videocam</mat-icon> Vào phòng tư vấn
+                </a>
+              }
               <button mat-stroked-button color="primary" (click)="updateStatus(a, 'Completed')">
                 <mat-icon>done_all</mat-icon> Hoàn thành
               </button>

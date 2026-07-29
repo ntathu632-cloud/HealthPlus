@@ -24,6 +24,7 @@ export interface Appointment {
   fee: number;
   isPaid: boolean;
   createdAt: string;
+  videoRoomUrl: string;
 }
 
 export interface CreateAppointmentRequest {

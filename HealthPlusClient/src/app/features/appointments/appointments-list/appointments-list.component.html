@@ -66,6 +66,11 @@
                 </div>
               }
             }
+            @if (a.status === 'Confirmed' && a.isPaid) {
+              <a mat-raised-button color="primary" class="video-btn" [href]="a.videoRoomUrl" target="_blank" rel="noopener">
+                <mat-icon>videocam</mat-icon> Vào phòng tư vấn
+              </a>
+            }
           </div>
           @if (a.status === 'Pending' || a.status === 'Confirmed') {
             <button mat-icon-button matTooltip="Huỷ lịch hẹn" class="del-btn" (click)="cancel(a)">

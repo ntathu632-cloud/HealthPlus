@@ -48,6 +48,16 @@ public class AppointmentService : IAppointmentService
         var patient = await _uow.Users.GetByIdAsync(patientId, ct)
             ?? throw new KeyNotFoundException("Không tìm thấy bệnh nhân.");
 
+        if (request.AppointmentTime <= DateTime.UtcNow)
+            throw new InvalidOperationException("Không thể đặt lịch hẹn trong quá khứ.");
+
+        var doctorBusy = await _uow.Appointments.AnyAsync(a =>
+            a.DoctorId == request.DoctorId &&
+            a.AppointmentTime == request.AppointmentTime &&
+            a.Status != AppointmentStatus.Cancelled, ct);
+        if (doctorBusy)
+            throw new InvalidOperationException("Bác sĩ đã có lịch hẹn khác vào thời điểm này, vui lòng chọn giờ khác.");
+
         var fee = doctor.ConsultationFee ?? 0;
         var appointment = new Appointment
         {
@@ -137,5 +147,8 @@ public class AppointmentService : IAppointmentService
         Fee = a.Fee,
         IsPaid = a.IsPaid,
         CreatedAt = a.CreatedAt,
+        // Phòng Jitsi Meet công khai, miễn phí, không cần đăng ký/API key — tên phòng suy ra
+        // trực tiếp từ Id lịch hẹn nên duy nhất và ổn định, không cần lưu thêm cột nào mới.
+        VideoRoomUrl = $"https://meet.jit.si/healthplus-{a.Id:N}",
     };
 }
