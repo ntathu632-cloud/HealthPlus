@@ -2,17 +2,26 @@ import { Component, OnInit, signal, computed } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { DatePipe } from '@angular/common';
+import { BaseChartDirective } from 'ng2-charts';
+import {
+  ChartConfiguration, ChartData, Chart, DoughnutController, ArcElement,
+  BarController, BarElement, LinearScale, CategoryScale, Tooltip, Legend,
+} from 'chart.js';
 import { AuthService } from '../../core/auth/auth.service';
 import { HealthRecordService } from '../../core/services/health-record.service';
 import { MedicalHistoryService } from '../../core/services/medical-history.service';
 import { VaccineService } from '../../core/services/vaccine.service';
 import { ReminderService } from '../../core/services/reminder.service';
-import { HealthRecord } from '../../models/health-record.models';
+import { HealthRecord, HealthMetric } from '../../models/health-record.models';
 import { MedicalHistory } from '../../models/medical-history.models';
 import { Vaccine } from '../../models/vaccine.models';
 import { Reminder } from '../../models/reminder.models';
+import { HealthMetricsChartComponent } from '../health-records/health-metrics-chart/health-metrics-chart.component';
+
+Chart.register(DoughnutController, ArcElement, BarController, BarElement, LinearScale, CategoryScale, Tooltip, Legend);
 
 interface StatCard { label: string; value: number; icon: string; bg: string; fg: string; lightBg: string; route: string; }
 
@@ -26,27 +35,38 @@ const recordsCache           = signal<HealthRecord[]>([]);
 const followUpsCache         = signal<MedicalHistory[]>([]);
 const overdueVaccinesCache   = signal<Vaccine[]>([]);
 const upcomingRemindersCache = signal<Reminder[]>([]);
+const allVaccinesCache       = signal<Vaccine[]>([]);
+const metricsCache           = signal<HealthMetric[]>([]);
 const recordsLoadedOnce      = signal(false);
 const followUpsLoadedOnce    = signal(false);
 const vaccinesLoadedOnce     = signal(false);
 const remindersLoadedOnce    = signal(false);
+const allVaccinesLoadedOnce  = signal(false);
+const metricsLoadedOnce      = signal(false);
 
 @Component({
     templateUrl: './dashboard.component.html',
     styleUrl: './dashboard.component.scss',
     selector: 'app-dashboard',
   standalone: true,
-  imports: [RouterLink, MatIconModule, MatButtonModule, MatProgressSpinnerModule, DatePipe]
+  imports: [
+    RouterLink, MatIconModule, MatButtonModule, MatCardModule, MatProgressSpinnerModule, DatePipe,
+    BaseChartDirective, HealthMetricsChartComponent,
+  ]
 })
 export class DashboardComponent implements OnInit {
   records           = recordsCache;
   followUps         = followUpsCache;
   overdueVaccines   = overdueVaccinesCache;
   upcomingReminders = upcomingRemindersCache;
+  allVaccines       = allVaccinesCache;
+  metrics           = metricsCache;
   recordsLoading    = computed(() => !recordsLoadedOnce());
   followUpsLoading  = computed(() => !followUpsLoadedOnce());
   vaccinesLoading   = computed(() => !vaccinesLoadedOnce());
   remindersLoading  = computed(() => !remindersLoadedOnce());
+  allVaccinesLoading = computed(() => !allVaccinesLoadedOnce());
+  metricsLoading    = computed(() => !metricsLoadedOnce());
   readonly today    = new Date();
 
   stats = computed<StatCard[]>(() => [
@@ -55,6 +75,84 @@ export class DashboardComponent implements OnInit {
     { label: 'Vaccine quá hạn',  value: this.overdueVaccines().length,   icon: 'vaccines',      bg: '#D32F2F', fg: '#D32F2F', lightBg: '#FFEBEE', route: '/vaccines' },
     { label: 'Nhắc nhở sắp tới', value: this.upcomingReminders().length, icon: 'notifications', bg: '#1565C0', fg: '#0D47A1', lightBg: '#DBEAFE', route: '/reminders' },
   ]);
+
+  // Biểu đồ cột 1 chuỗi (số lượng theo từng mục) — theo dataviz skill: 1 series thì dùng 1 màu
+  // duy nhất (màu không mang ý nghĩa xếp hạng), không cần legend vì trục đã ghi rõ nhãn.
+  countsChartData = computed<ChartData<'bar'>>(() => ({
+    labels: this.stats().map(s => s.label),
+    datasets: [{
+      data: this.stats().map(s => s.value),
+      backgroundColor: '#1565C0',
+      borderRadius: 4,
+      barThickness: 24,
+    }],
+  }));
+  countsChartOptions: ChartConfiguration<'bar'>['options'] = {
+    indexAxis: 'y',
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: 'white', titleColor: '#0F172A', bodyColor: '#546E7A',
+        borderColor: '#E2E8F0', borderWidth: 1, padding: 10, boxPadding: 4,
+      },
+    },
+    scales: {
+      x: { beginAtZero: true, ticks: { color: '#64748B', font: { size: 11 }, precision: 0 }, grid: { color: '#F0F4F8' } },
+      y: { ticks: { color: '#334155', font: { size: 12 } }, grid: { display: false } },
+    },
+  };
+
+  // Màu trạng thái tái dùng nguyên từ chip trạng thái vaccine đã có sẵn trong app
+  // (vaccines-list.component.scss) — đã validate qua dataviz skill: CVD ΔE 23.4/24.4,
+  // tương phản >=3:1 với nền trắng, đạt hết các ngưỡng.
+  private readonly vaccineStatusColors: Record<string, string> = {
+    Completed: '#2E7D32', Scheduled: '#1565C0', Overdue: '#C62828',
+  };
+  vaccineStatusData = computed<ChartData<'doughnut'>>(() => {
+    const counts = { Completed: 0, Scheduled: 0, Overdue: 0 };
+    for (const v of this.allVaccines()) counts[v.status]++;
+    return {
+      labels: ['Đã tiêm', 'Sắp tiêm', 'Quá hạn'],
+      datasets: [{
+        data: [counts.Completed, counts.Scheduled, counts.Overdue],
+        backgroundColor: [this.vaccineStatusColors['Completed'], this.vaccineStatusColors['Scheduled'], this.vaccineStatusColors['Overdue']],
+        borderColor: '#FFFFFF',
+        borderWidth: 2,
+        hoverOffset: 6,
+      }],
+    };
+  });
+  vaccineStatusOptions: ChartConfiguration<'doughnut'>['options'] = {
+    responsive: true,
+    maintainAspectRatio: false,
+    cutout: '68%',
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: {
+          color: '#334155', font: { size: 12 }, padding: 14, usePointStyle: true, pointStyle: 'circle',
+          // Thêm số liệu vào nhãn legend — relief cho khả năng phân biệt màu, giống Admin Dashboard.
+          generateLabels: chart => {
+            const data = chart.data.datasets[0]?.data as number[] ?? [];
+            const labels = chart.data.labels as string[] ?? [];
+            return labels.map((label, i) => ({
+              text: `${label} (${data[i]})`,
+              fillStyle: (chart.data.datasets[0]?.backgroundColor as string[])[i],
+              strokeStyle: 'transparent',
+              pointStyle: 'circle' as const,
+              index: i,
+            }));
+          },
+        },
+      },
+      tooltip: {
+        backgroundColor: 'white', titleColor: '#0F172A', bodyColor: '#546E7A',
+        borderColor: '#E2E8F0', borderWidth: 1, padding: 10, boxPadding: 4,
+      },
+    },
+  };
 
   constructor(
     public auth: AuthService,
@@ -72,15 +170,28 @@ export class DashboardComponent implements OnInit {
       followUpsCache.set([]);
       overdueVaccinesCache.set([]);
       upcomingRemindersCache.set([]);
+      allVaccinesCache.set([]);
+      metricsCache.set([]);
       recordsLoadedOnce.set(false);
       followUpsLoadedOnce.set(false);
       vaccinesLoadedOnce.set(false);
       remindersLoadedOnce.set(false);
+      allVaccinesLoadedOnce.set(false);
+      metricsLoadedOnce.set(false);
     }
 
     this.healthSvc.getAll().subscribe({
-      next: r => { recordsCache.set(r.data); recordsLoadedOnce.set(true); },
-      error: () => recordsLoadedOnce.set(true),
+      next: r => {
+        recordsCache.set(r.data);
+        recordsLoadedOnce.set(true);
+        const firstRecord = r.data[0];
+        if (!firstRecord) { metricsLoadedOnce.set(true); return; }
+        this.healthSvc.getMetrics(firstRecord.id, 1, 20).subscribe({
+          next: m => { metricsCache.set(m.data.items); metricsLoadedOnce.set(true); },
+          error: () => metricsLoadedOnce.set(true),
+        });
+      },
+      error: () => { recordsLoadedOnce.set(true); metricsLoadedOnce.set(true); },
     });
     this.medSvc.getUpcomingFollowUps(30).subscribe({
       next: r => { followUpsCache.set(r.data); followUpsLoadedOnce.set(true); },
@@ -89,6 +200,10 @@ export class DashboardComponent implements OnInit {
     this.vacSvc.getOverdue().subscribe({
       next: r => { overdueVaccinesCache.set(r.data); vaccinesLoadedOnce.set(true); },
       error: () => vaccinesLoadedOnce.set(true),
+    });
+    this.vacSvc.getAll(undefined, 1, 100).subscribe({
+      next: r => { allVaccinesCache.set(r.data.items); allVaccinesLoadedOnce.set(true); },
+      error: () => allVaccinesLoadedOnce.set(true),
     });
     // 7 ngày thay vì 24h — để mục này luôn có nội dung hữu ích thay vì trống trơn
     // chỉ vì không có nhắc nhở nào rơi đúng vào ~24 giờ tới.
@@ -101,9 +216,5 @@ export class DashboardComponent implements OnInit {
   firstName(): string {
     const name = this.auth.currentUserName() ?? '';
     return name.trim().split(' ').pop() ?? name;
-  }
-
-  daysUntil(date: string): number {
-    return Math.ceil((new Date(date).getTime() - Date.now()) / 86400000);
   }
 }
