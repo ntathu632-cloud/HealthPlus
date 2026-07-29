@@ -4,11 +4,12 @@
 .page-subtitle { color: var(--hp-text-secondary); font-size: 14px; margin: 0; }
 .loading-center { display: flex; justify-content: center; padding: 80px 0; }
 
-.status-tabs { display: flex; gap: 4px; margin-bottom: 20px; flex-wrap: wrap; }
+.status-tabs { display: flex; align-items: center; gap: 4px; margin-bottom: 20px; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; }
 .status-tab {
   padding: 6px 14px; border-radius: 20px; border: 1px solid var(--hp-border);
   background: white; cursor: pointer; font-size: 13px; color: var(--hp-text-secondary);
   display: flex; align-items: center; gap: 6px; transition: all 0.2s;
+  white-space: nowrap; flex-shrink: 0;
   &:hover { background: var(--hp-primary-light, #E3F2FD); }
   &.active { background: var(--hp-primary); color: white; border-color: var(--hp-primary); }
 }
