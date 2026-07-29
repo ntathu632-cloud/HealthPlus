@@ -3,17 +3,17 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { AuthService } from '../../core/auth/auth.service';
 
-interface NavItem { label: string; icon: string; route: string; badge?: string; }
+interface NavItem { label: string; icon: string; route: string; }
 
 const PATIENT_NAV: NavItem[] = [
   { label: 'Tổng quan',        icon: 'grid_view',            route: '/dashboard' },
   { label: 'Hồ sơ sức khỏe',  icon: 'person',               route: '/health-records' },
-  { label: 'Lịch hẹn khám',    icon: 'event',                 route: '/appointments', badge: 'HOT' },
+  { label: 'Khám Online',      icon: 'event',                 route: '/appointments' },
   { label: 'Lịch sử khám',     icon: 'local_hospital',       route: '/medical-history' },
   { label: 'Tiêm chủng',       icon: 'vaccines',             route: '/vaccines' },
   { label: 'Đơn thuốc',        icon: 'medication',           route: '/prescriptions' },
   { label: 'Nhắc nhở',         icon: 'notifications_active', route: '/reminders' },
-  { label: 'Trợ lý AI',        icon: 'smart_toy',            route: '/ai-chat', badge: 'HOT' },
+  { label: 'Trợ lý AI',        icon: 'smart_toy',            route: '/ai-chat' },
   { label: 'Thanh toán',       icon: 'receipt_long',         route: '/payments' },
 ];
 

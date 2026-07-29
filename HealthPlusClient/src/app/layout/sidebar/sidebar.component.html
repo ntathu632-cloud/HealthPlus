@@ -23,9 +23,6 @@
          (click)="closeSidenav.emit()">
         <span class="ni-icon"><mat-icon>{{ item.icon }}</mat-icon></span>
         <span class="ni-text">{{ item.label }}</span>
-        @if (item.badge) {
-          <span class="ni-badge">🔥 {{ item.badge }}</span>
-        }
       </a>
     }
   </nav>
