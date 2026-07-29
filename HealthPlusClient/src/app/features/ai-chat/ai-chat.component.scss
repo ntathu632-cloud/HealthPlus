@@ -1,4 +1,4 @@
-.page { max-width: 800px; display: flex; flex-direction: column; height: calc(100vh - 120px); }
+.page { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; height: calc(100vh - 120px); }
 .page-header { margin-bottom: 14px; }
 .page-title { font-size: 22px; font-weight: 700; color: var(--hp-text-primary); margin: 0 0 4px; }
 .page-subtitle { color: var(--hp-text-secondary); font-size: 14px; margin: 0; }
