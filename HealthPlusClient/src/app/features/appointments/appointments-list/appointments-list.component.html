@@ -14,16 +14,16 @@
     </div>
   </div>
 
-  <div class="status-tabs">
+  <mat-chip-listbox class="status-tabs" [value]="selectedStatus" (change)="onStatusFilterChange($event)" aria-label="Lọc theo trạng thái">
     @for (tab of statusTabs; track tab.value) {
-      <button class="status-tab" [class.active]="selectedStatus === tab.value" (click)="selectedStatus = tab.value">
+      <mat-chip-option [value]="tab.value" [selectable]="true" [selected]="selectedStatus === tab.value">
         {{ tab.label }}
         @if (countByStatus(tab.value) > 0) {
           <span class="tab-count" [ngClass]="tab.value.toLowerCase()">{{ countByStatus(tab.value) }}</span>
         }
-      </button>
+      </mat-chip-option>
     }
-  </div>
+  </mat-chip-listbox>
 
   @if (loading()) {
     <div class="loading-center"><mat-spinner diameter="48" /></div>
@@ -72,11 +72,13 @@
               </a>
             }
           </div>
-          @if (a.status === 'Pending' || a.status === 'Confirmed') {
-            <button mat-icon-button matTooltip="Huỷ lịch hẹn" class="del-btn" (click)="cancel(a)">
-              <mat-icon>event_busy</mat-icon>
-            </button>
-          }
+          <div class="actions-slot">
+            @if (a.status === 'Pending' || a.status === 'Confirmed') {
+              <button mat-icon-button matTooltip="Huỷ lịch hẹn" class="del-btn" (click)="cancel(a)">
+                <mat-icon>event_busy</mat-icon>
+              </button>
+            }
+          </div>
         </mat-card>
       }
     </div>

@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatChipsModule, MatChipListboxChange } from '@angular/material/chips';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AppointmentService } from '../../../core/services/appointment.service';
@@ -20,7 +21,7 @@ import { BookAppointmentDialogComponent } from '../book-appointment-dialog/book-
   standalone: true,
   imports: [
     DatePipe, DecimalPipe, NgClass, RouterLink,
-    MatCardModule, MatButtonModule, MatIconModule, MatProgressSpinnerModule, MatTooltipModule,
+    MatCardModule, MatButtonModule, MatIconModule, MatProgressSpinnerModule, MatTooltipModule, MatChipsModule,
   ]
 })
 export class AppointmentsListComponent implements OnInit {
@@ -57,6 +58,10 @@ export class AppointmentsListComponent implements OnInit {
       next: res => { this.allItems.set(res.data); this.loading.set(false); },
       error: () => this.loading.set(false),
     });
+  }
+
+  onStatusFilterChange(e: MatChipListboxChange): void {
+    this.selectedStatus = e.value;
   }
 
   countByStatus(status: string): number {
