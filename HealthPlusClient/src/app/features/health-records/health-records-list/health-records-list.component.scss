@@ -46,8 +46,8 @@
 }
 .metric-item { display: flex; flex-direction: column; align-items: center; }
 .metric-val  { font-size: 18px; font-weight: 700; color: var(--hp-text-primary); }
-.metric-val.bmi-normal      { color: #2E7D32; }
-.metric-val.bmi-overweight  { color: #F57C00; }
+.metric-val.bmi-normal      { color: #0D47A1; }
+.metric-val.bmi-overweight  { color: #AD1457; }
 .metric-val.bmi-obese       { color: #C62828; }
 .metric-val.bmi-underweight { color: #1565C0; }
 .metric-lbl  { font-size: 11px; color: var(--hp-text-secondary); }

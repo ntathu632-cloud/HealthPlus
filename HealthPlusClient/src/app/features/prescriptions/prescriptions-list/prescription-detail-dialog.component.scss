@@ -9,9 +9,9 @@ h2[mat-dialog-title] { margin: 0; font-size: 18px; font-weight: 700; padding: 0;
 
 .status-chip {
   padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; white-space: nowrap;
-  &.pending    { background: #FFF3E0; color: #E65100; }
+  &.pending    { background: #FCE4EC; color: #AD1457; }
   &.processing { background: #E3F2FD; color: #1565C0; }
-  &.completed  { background: #E8F5E9; color: #2E7D32; }
+  &.completed  { background: #BBDEFB; color: #0D47A1; }
   &.failed     { background: #FFEBEE; color: #C62828; }
 }
 
@@ -60,7 +60,7 @@ mat-dialog-content { padding: 16px 24px !important; max-height: 68vh; }
   padding: 10px 12px; border-radius: 10px; margin-bottom: 8px;
   background: #FAFAFA; border: 1px solid var(--hp-border);
   transition: border-color 0.2s;
-  &.confirmed { border-color: #A5D6A7; background: #F1F8E9; }
+  &.confirmed { border-color: #90CAF9; background: #E3F2FD; }
 }
 .item-icon {
   width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
@@ -68,8 +68,8 @@ mat-dialog-content { padding: 16px 24px !important; max-height: 68vh; }
   background: #F5F5F5;
   mat-icon { font-size: 18px; width: 18px; height: 18px; color: var(--hp-text-secondary); }
   &.confirmed {
-    background: #E8F5E9;
-    mat-icon { color: #2E7D32; }
+    background: #BBDEFB;
+    mat-icon { color: #0D47A1; }
   }
 }
 .item-info { flex: 1; min-width: 0; }

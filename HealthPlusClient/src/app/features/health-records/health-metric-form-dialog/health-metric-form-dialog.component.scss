@@ -10,15 +10,15 @@ mat-dialog-content { padding: 16px 24px !important; max-height: 65vh; }
 .bmi-preview {
   display: flex; flex-direction: column; align-items: center;
   padding: 14px; border-radius: 12px; margin-bottom: 8px;
-  background: #E8F5E9;
-  &.bmi-overweight  { background: #FFF3E0; }
+  background: #BBDEFB;
+  &.bmi-overweight  { background: #FCE4EC; }
   &.bmi-obese       { background: #FFEBEE; }
   &.bmi-underweight { background: #E3F2FD; }
 }
 .bmi-val   { font-size: 32px; font-weight: 700; color: var(--hp-text-primary); }
 .bmi-label { font-size: 13px; font-weight: 600; color: var(--hp-text-secondary); }
-.bmi-preview.bmi-normal .bmi-label      { color: #2E7D32; }
-.bmi-preview.bmi-overweight .bmi-label  { color: #F57C00; }
+.bmi-preview.bmi-normal .bmi-label      { color: #0D47A1; }
+.bmi-preview.bmi-overweight .bmi-label  { color: #AD1457; }
 .bmi-preview.bmi-obese .bmi-label       { color: #C62828; }
 .bmi-preview.bmi-underweight .bmi-label { color: #1565C0; }
 

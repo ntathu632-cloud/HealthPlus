@@ -20,7 +20,7 @@ interface FeatureDetail {
 export class FeaturesPageComponent {
   readonly features: FeatureDetail[] = [
     {
-      icon: 'folder_shared', color: '#EF6C00',
+      icon: 'folder_shared', color: '#AD1457',
       title: 'Hồ sơ sức khỏe số hoá',
       desc: 'Lưu trữ toàn bộ chỉ số sức khỏe cho bản thân và từng thành viên trong gia đình.',
       points: ['Theo dõi chiều cao, cân nặng, BMI, huyết áp theo thời gian', 'Biểu đồ trực quan để thấy rõ xu hướng', 'Quản lý hồ sơ riêng cho từng thành viên gia đình'],
@@ -32,7 +32,7 @@ export class FeaturesPageComponent {
       points: ['Ghi nhận chẩn đoán, điều trị, ngày tái khám', 'Bác sĩ được phân công có thể xem và cập nhật trực tiếp', 'Đính kèm tài liệu y tế liên quan'],
     },
     {
-      icon: 'event_available', color: '#2E7D32',
+      icon: 'event_available', color: '#0D47A1',
       title: 'Đặt lịch khám online',
       desc: 'Chọn bác sĩ, chọn khung giờ, đặt lịch chỉ trong một phút.',
       points: ['Xem danh sách bác sĩ đang hoạt động', 'Theo dõi trạng thái: chờ xác nhận, đã xác nhận, hoàn thành', 'Huỷ lịch dễ dàng khi cần đổi kế hoạch'],

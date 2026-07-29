@@ -55,8 +55,8 @@ export class DoctorDashboardComponent implements OnInit {
 
   stats = computed<StatCard[]>(() => [
     { label: 'Tổng bệnh nhân', value: this.patients().length, icon: 'groups', fg: '#1565C0', lightBg: '#E3F2FD', route: '/doctor/patients' },
-    { label: 'Lịch hẹn sắp tới', value: this.upcomingAppointments().length, icon: 'today', fg: '#2E7D32', lightBg: '#E8F5E9', route: '/doctor/appointments' },
-    { label: 'Chờ xác nhận', value: this.pendingAppointments().length, icon: 'pending_actions', fg: '#EF6C00', lightBg: '#FFF3E0', route: '/doctor/appointments' },
+    { label: 'Lịch hẹn sắp tới', value: this.upcomingAppointments().length, icon: 'today', fg: '#0D47A1', lightBg: '#BBDEFB', route: '/doctor/appointments' },
+    { label: 'Chờ xác nhận', value: this.pendingAppointments().length, icon: 'pending_actions', fg: '#C62828', lightBg: '#FFEBEE', route: '/doctor/appointments' },
     { label: 'Đã xác nhận (sắp tới)', value: this.upcomingConfirmedCount(), icon: 'event_available', fg: '#6A1B9A', lightBg: '#F3E5F5', route: '/doctor/appointments' },
   ]);
 

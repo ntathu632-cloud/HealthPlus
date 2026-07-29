@@ -10,18 +10,18 @@
 /* Upcoming banner */
 .upcoming-banner {
   display: flex; align-items: flex-start; gap: 12px;
-  background: #E8F5E9; border: 1px solid #C8E6C9;
+  background: #BBDEFB; border: 1px solid #90CAF9;
   border-radius: var(--hp-radius-sm, 10px); padding: 14px 16px; margin-bottom: 20px;
-  > mat-icon { color: #2E7D32; flex-shrink: 0; margin-top: 2px; }
+  > mat-icon { color: #0D47A1; flex-shrink: 0; margin-top: 2px; }
 }
-.upcoming-content { flex: 1; strong { color: #2E7D32; font-size: 14px; display: block; margin-bottom: 8px; } }
+.upcoming-content { flex: 1; strong { color: #0D47A1; font-size: 14px; display: block; margin-bottom: 8px; } }
 .upcoming-chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .upcoming-chip {
   display: inline-flex; align-items: center; gap: 5px;
-  padding: 4px 10px; background: white; border: 1px solid #C8E6C9;
-  border-radius: 20px; font-size: 12px; color: #2E7D32; cursor: pointer;
+  padding: 4px 10px; background: white; border: 1px solid #90CAF9;
+  border-radius: 20px; font-size: 12px; color: #0D47A1; cursor: pointer;
   mat-icon { font-size: 13px; width: 13px; height: 13px; }
-  &:hover { background: #C8E6C9; }
+  &:hover { background: #90CAF9; }
 }
 .upcoming-time { font-weight: 700; margin-left: 2px; }
 
@@ -76,9 +76,9 @@
   display: flex; align-items: center; justify-content: center;
   mat-icon { font-size: 22px; width: 22px; height: 22px; }
   &.medicine  { background: #FCE4EC; mat-icon { color: #AD1457; } }
-  &.vaccine   { background: #FFF3E0; mat-icon { color: #E65100; } }
+  &.vaccine   { background: #FCE4EC; mat-icon { color: #AD1457; } }
   &.followup  { background: #E0F7FA; mat-icon { color: #00695C; } }
-  &.checkup   { background: #E8F5E9; mat-icon { color: #2E7D32; } }
+  &.checkup   { background: #BBDEFB; mat-icon { color: #0D47A1; } }
 }
 
 /* Info */
@@ -107,7 +107,7 @@
 .countdown {
   padding: 1px 6px; border-radius: 10px; font-size: 10px; font-weight: 700;
   background: #E3F2FD; color: #1565C0; margin-left: 4px;
-  &.soon { background: #FFF3E0; color: #E65100; }
+  &.soon { background: #FCE4EC; color: #AD1457; }
   &.past { background: #FFEBEE; color: #C62828; }
 }
 .reminder-message {

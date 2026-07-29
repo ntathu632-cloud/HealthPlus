@@ -19,7 +19,7 @@ mat-dialog-actions { padding: 8px 24px 20px !important; gap: 8px; }
   display: flex; align-items: center; gap: 6px; color: var(--hp-text-secondary);
   mat-icon { font-size: 16px; width: 16px; height: 16px; color: var(--hp-primary); }
   &.fee { color: var(--hp-text-primary); font-weight: 500; }
-  &.fee.free mat-icon { color: #2E7D32; }
+  &.fee.free mat-icon { color: #0D47A1; }
 }
 
 .payment-step { min-width: 340px; }
@@ -34,6 +34,6 @@ mat-dialog-actions { padding: 8px 24px 20px !important; gap: 8px; }
 }
 .demo-note {
   display: flex; align-items: center; gap: 8px;
-  background: #FFF3E0; color: #E65100; border-radius: 8px; padding: 10px 14px; font-size: 12.5px;
+  background: #FCE4EC; color: #AD1457; border-radius: 8px; padding: 10px 14px; font-size: 12.5px;
   mat-icon { font-size: 17px; width: 17px; height: 17px; flex-shrink: 0; }
 }

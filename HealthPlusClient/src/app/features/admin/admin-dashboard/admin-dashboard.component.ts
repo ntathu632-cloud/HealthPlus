@@ -30,16 +30,18 @@ export class AdminDashboardComponent implements OnInit {
     if (!s) return [];
     return [
       { label: 'Tổng người dùng', value: s.totalUsers, icon: 'group', color: '#1565C0' },
-      { label: 'Bác sĩ', value: s.totalDoctors, icon: 'medical_services', color: '#2E7D32' },
-      { label: 'Bệnh nhân', value: s.totalPatients, icon: 'personal_injury', color: '#EF6C00' },
+      { label: 'Bác sĩ', value: s.totalDoctors, icon: 'medical_services', color: '#AD1457' },
+      { label: 'Bệnh nhân', value: s.totalPatients, icon: 'personal_injury', color: '#0D47A1' },
       { label: 'Phân công đang hoạt động', value: s.totalAssignments, icon: 'assignment_ind', color: '#6A1B9A' },
       { label: 'Nhật ký 7 ngày qua', value: s.recentAuditLogCount, icon: 'history', color: '#C62828' },
     ] as StatCard[];
   };
 
-  // Bảng màu categorical đã validate (blue/green/magenta) — xem dataviz skill: cả 3 cặp liền kề
-  // đều đạt ngưỡng phân biệt màu cho người mù màu (CVD ΔE ≥ 8 light mode) và tương phản thường (≥15).
-  private readonly roleColors = ['#2a78d6', '#008300', '#e87ba4'];
+  // Bảng màu categorical đã validate (blue/red/pink — bỏ xanh lá theo yêu cầu thống nhất chỉ
+  // dùng xanh dương/đỏ(hồng) cho toàn app). Xanh dương ở đây (--blue-500, tươi hơn xanh chủ đạo
+  // UI) theo đúng quy ước riêng cho biểu đồ. Xem dataviz skill: cả 3 cặp liền kề đều đạt ngưỡng
+  // phân biệt màu cho người mù màu (CVD ΔE ≥ 8 light mode) và tương phản thường (≥15).
+  private readonly roleColors = ['#2196F3', '#C62828', '#e87ba4'];
 
   chartData: ChartData<'doughnut'> = { labels: [], datasets: [] };
   chartOptions: ChartConfiguration<'doughnut'>['options'] = {
@@ -98,6 +100,7 @@ export class AdminDashboardComponent implements OnInit {
 
   // Biểu đồ cột 1 chuỗi (số bệnh nhân/bác sĩ) — theo dataviz skill: 1 series thì dùng 1 màu duy nhất
   // (màu không mang ý nghĩa xếp hạng), không cần legend riêng vì trục Y đã ghi rõ tên bác sĩ.
+  // Xanh dương tươi (--blue-500), riêng cho biểu đồ, khác xanh chủ đạo của giao diện.
   loadingPatientsByDoctor = signal(true);
   patientsByDoctorData: ChartData<'bar'> = { labels: [], datasets: [] };
   patientsByDoctorOptions: ChartConfiguration<'bar'>['options'] = {
@@ -144,7 +147,7 @@ export class AdminDashboardComponent implements OnInit {
           labels: entries.map(([name]) => name),
           datasets: [{
             data: entries.map(([, count]) => count),
-            backgroundColor: '#2a78d6',
+            backgroundColor: '#2196F3',
             borderRadius: 4,
             barThickness: 20,
           }],

@@ -29,7 +29,7 @@
 .amount { font-size: 15px; font-weight: 700; color: var(--hp-text-primary); }
 .status-chip {
   padding: 2px 9px; border-radius: 20px; font-size: 11px; font-weight: 600; white-space: nowrap;
-  &.pending   { background: #FFF3E0; color: #E65100; }
-  &.completed { background: #E8F5E9; color: #2E7D32; }
+  &.pending   { background: #FCE4EC; color: #AD1457; }
+  &.completed { background: #BBDEFB; color: #0D47A1; }
   &.failed    { background: #FFEBEE; color: #C62828; }
 }

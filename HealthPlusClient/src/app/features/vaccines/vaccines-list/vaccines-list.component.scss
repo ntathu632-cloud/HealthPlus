@@ -39,7 +39,7 @@
 }
 .tab-count {
   padding: 1px 6px; border-radius: 10px; font-size: 11px; font-weight: 700;
-  &.Completed  { background: #E8F5E9; color: #2E7D32; }
+  &.Completed  { background: #BBDEFB; color: #0D47A1; }
   &.Scheduled  { background: #E3F2FD; color: #1565C0; }
   &.Overdue    { background: #FFEBEE; color: #C62828; }
 }
@@ -67,7 +67,7 @@
 }
 .status-bar {
   height: 4px;
-  &.completed  { background: #2E7D32; }
+  &.completed  { background: #0D47A1; }
   &.scheduled  { background: #1976D2; }
   &.overdue    { background: #C62828; }
 }
@@ -77,7 +77,7 @@
 .vaccine-icon {
   width: 40px; height: 40px; border-radius: 12px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  &.completed  { background: #E8F5E9; mat-icon { color: #2E7D32; } }
+  &.completed  { background: #BBDEFB; mat-icon { color: #0D47A1; } }
   &.scheduled  { background: #E3F2FD; mat-icon { color: #1976D2; } }
   &.overdue    { background: #FFEBEE; mat-icon { color: #C62828; } }
 }
@@ -88,7 +88,7 @@
 .status-chip {
   padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600;
   flex-shrink: 0;
-  &.completed  { background: #E8F5E9; color: #2E7D32; }
+  &.completed  { background: #BBDEFB; color: #0D47A1; }
   &.scheduled  { background: #E3F2FD; color: #1565C0; }
   &.overdue    { background: #FFEBEE; color: #C62828; }
 }
@@ -101,15 +101,15 @@
   b { color: var(--hp-text-primary); }
 }
 .info-row.overdue-row { color: #C62828; mat-icon { color: #C62828; } b { color: #C62828; } }
-.info-row.side-effects { color: #F57C00; mat-icon { color: #F57C00; } }
+.info-row.side-effects { color: #AD1457; mat-icon { color: #AD1457; } }
 
 .overdue-tag {
   margin-left: auto; padding: 1px 6px; background: #FFEBEE;
   color: #C62828; border-radius: 10px; font-size: 10px; font-weight: 700; white-space: nowrap;
 }
 .soon-tag {
-  margin-left: auto; padding: 1px 6px; background: #FFF3E0;
-  color: #F57C00; border-radius: 10px; font-size: 10px; font-weight: 600; white-space: nowrap;
+  margin-left: auto; padding: 1px 6px; background: #FCE4EC;
+  color: #AD1457; border-radius: 10px; font-size: 10px; font-weight: 600; white-space: nowrap;
 }
 
 .card-actions {

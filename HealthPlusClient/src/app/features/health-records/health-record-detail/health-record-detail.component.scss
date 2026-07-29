@@ -28,7 +28,7 @@
 .lbl  { font-size: 13px; color: var(--hp-text-secondary); flex-shrink: 0; margin-right: 8px; }
 .val  { font-size: 13px; font-weight: 500; color: var(--hp-text-primary); text-align: right; }
 .val.blood { color: #C62828; }
-.val.warn  { color: #F57C00; }
+.val.warn  { color: #AD1457; }
 
 .metrics-summary { grid-column: 2; }
 @media (max-width: 768px) { .metrics-summary { grid-column: 1; } }
@@ -48,15 +48,15 @@
   background: var(--hp-bg); border-radius: 12px; padding: 14px 8px;
   display: flex; flex-direction: column; align-items: center; text-align: center;
 }
-.metric-box.bmi-normal      { background: #E8F5E9; }
-.metric-box.bmi-overweight  { background: #FFF3E0; }
+.metric-box.bmi-normal      { background: #BBDEFB; }
+.metric-box.bmi-overweight  { background: #FCE4EC; }
 .metric-box.bmi-obese       { background: #FFEBEE; }
 .metric-box.bmi-underweight { background: #E3F2FD; }
 .m-val    { font-size: 20px; font-weight: 700; color: var(--hp-text-primary); }
 .m-lbl    { font-size: 11px; color: var(--hp-text-secondary); margin-top: 2px; }
 .m-status { font-size: 10px; font-weight: 600; margin-top: 4px; }
-.metric-box.bmi-normal .m-status      { color: #2E7D32; }
-.metric-box.bmi-overweight .m-status  { color: #F57C00; }
+.metric-box.bmi-normal .m-status      { color: #0D47A1; }
+.metric-box.bmi-overweight .m-status  { color: #AD1457; }
 .metric-box.bmi-obese .m-status       { color: #C62828; }
 .metric-box.bmi-underweight .m-status { color: #1565C0; }
 
@@ -85,8 +85,8 @@
   padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 500;
   background: var(--hp-bg); color: var(--hp-text-primary);
 }
-.mv-chip.bmi.bmi-normal      { background: #E8F5E9; color: #2E7D32; }
-.mv-chip.bmi.bmi-overweight  { background: #FFF3E0; color: #F57C00; }
+.mv-chip.bmi.bmi-normal      { background: #BBDEFB; color: #0D47A1; }
+.mv-chip.bmi.bmi-overweight  { background: #FCE4EC; color: #AD1457; }
 .mv-chip.bmi.bmi-obese       { background: #FFEBEE; color: #C62828; }
 .mv-chip.bmi.bmi-underweight { background: #E3F2FD; color: #1565C0; }
 .del-btn { color: #BDBDBD !important; }

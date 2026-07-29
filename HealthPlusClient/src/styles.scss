@@ -67,6 +67,7 @@ html {
   --mat-sys-on-background: #0F172A;
   --mat-sys-outline: #E2E8F0;
   --mat-sys-outline-variant: #F1F5F9;
+  --mat-sys-primary: #1976D2;
   --mat-sys-secondary: #1565C0;
   --mat-sys-secondary-container: #E3F2FD;
   --mat-sys-on-secondary: #FFFFFF;
@@ -126,7 +127,7 @@ body {
   --white:    #FFFFFF;
 
   // Semantic aliases
-  --hp-primary:        var(--blue-800);
+  --hp-primary:        var(--blue-700);
   --hp-primary-dark:   var(--blue-900);
   --hp-primary-light:  var(--blue-50);
   --hp-red:            var(--red-700);
@@ -180,7 +181,7 @@ body {
 // ép nền thành xanh đậm cho nút chính (primary) nhưng THIẾU đổi màu chữ, nên chữ xanh dương lại nằm
 // trên nền xanh đậm — không đọc được. Bổ sung màu chữ trắng để khớp với nền.
 .mat-mdc-raised-button.mat-primary {
-  background-color: var(--blue-800) !important;
+  background-color: var(--blue-700) !important;
   color: #FFFFFF !important;
 }
 .mat-mdc-form-field { width: 100%; }

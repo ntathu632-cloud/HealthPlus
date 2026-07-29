@@ -55,8 +55,8 @@
 .head-dot {
   width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
   &.blue   { background: #1565C0; }
-  &.green  { background: #2E7D32; }
-  &.orange { background: #EF6C00; }
+  &.green  { background: #0D47A1; }
+  &.orange { background: #C62828; }
 }
 h3 { font-size: 14px; font-weight: 700; color: #0F172A; margin: 0; }
 .see-all { font-size: 12px; color: #1565C0; text-decoration: none; font-weight: 500; opacity: 0.8; &:hover { opacity: 1; } }
@@ -79,8 +79,8 @@ h3 { font-size: 14px; font-weight: 700; color: #0F172A; margin: 0; }
   width: 32px; height: 32px; border-radius: 9px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
   mat-icon { font-size: 16px; width: 16px; height: 16px; }
-  &.green-light  { background: #E8F5E9; mat-icon { color: #2E7D32; } }
-  &.orange-light { background: #FFF3E0; mat-icon { color: #EF6C00; } }
+  &.green-light  { background: #BBDEFB; mat-icon { color: #0D47A1; } }
+  &.orange-light { background: #FFEBEE; mat-icon { color: #C62828; } }
 }
 .row-info { flex: 1; min-width: 0; }
 .row-name { font-size: 13px; font-weight: 600; color: #0F172A; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -90,8 +90,8 @@ h3 { font-size: 14px; font-weight: 700; color: #0F172A; margin: 0; }
 .tag {
   padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600;
   white-space: nowrap; flex-shrink: 0;
-  &.green  { background: #E8F5E9; color: #2E7D32; }
-  &.orange { background: #FFF3E0; color: #EF6C00; }
+  &.green  { background: #BBDEFB; color: #0D47A1; }
+  &.orange { background: #FFEBEE; color: #C62828; }
 }
 
 /* ── Empty ── */
@@ -100,7 +100,7 @@ h3 { font-size: 14px; font-weight: 700; color: #0F172A; margin: 0; }
   padding: 28px 16px; text-align: center;
   mat-icon { font-size: 36px; width: 36px; height: 36px; color: #CBD5E1; margin-bottom: 8px; }
   p { font-size: 13px; color: #94A3B8; margin: 0; }
-  &.good { mat-icon { color: #A5D6A7; } p { color: #2E7D32; font-weight: 500; } }
+  &.good { mat-icon { color: #90CAF9; } p { color: #0D47A1; font-weight: 500; } }
 }
 
 @media (max-width: 960px) {

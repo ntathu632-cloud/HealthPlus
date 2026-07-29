@@ -34,9 +34,9 @@
 
 .status-chip {
   padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600;
-  &.pending    { background: #FFF3E0; color: #E65100; }
+  &.pending    { background: #FCE4EC; color: #AD1457; }
   &.confirmed  { background: #E3F2FD; color: #1565C0; }
-  &.completed  { background: #E8F5E9; color: #2E7D32; }
+  &.completed  { background: #BBDEFB; color: #0D47A1; }
   &.cancelled  { background: #FFEBEE; color: #C62828; }
 }
 

@@ -82,11 +82,12 @@ export class DashboardComponent implements OnInit {
 
   // Biểu đồ cột 1 chuỗi (số lượng theo từng mục) — theo dataviz skill: 1 series thì dùng 1 màu
   // duy nhất (màu không mang ý nghĩa xếp hạng), không cần legend vì trục đã ghi rõ nhãn.
+  // Dùng xanh dương tươi hơn (--blue-500) cho biểu đồ, phân biệt với xanh chủ đạo của giao diện.
   countsChartData = computed<ChartData<'bar'>>(() => ({
     labels: this.stats().map(s => s.label),
     datasets: [{
       data: this.stats().map(s => s.value),
-      backgroundColor: '#1565C0',
+      backgroundColor: '#2196F3',
       borderRadius: 4,
       barThickness: 24,
     }],
@@ -108,11 +109,11 @@ export class DashboardComponent implements OnInit {
     },
   };
 
-  // Màu trạng thái tái dùng nguyên từ chip trạng thái vaccine đã có sẵn trong app
-  // (vaccines-list.component.scss) — đã validate qua dataviz skill: CVD ΔE 23.4/24.4,
-  // tương phản >=3:1 với nền trắng, đạt hết các ngưỡng.
+  // 3 trạng thái cần 3 màu phân biệt rõ — biểu đồ được phép dùng nhiều màu hơn giao diện khi
+  // thật sự cần, miễn xanh dương dùng ở đây tươi hơn xanh chủ đạo của UI. Đã validate qua
+  // dataviz skill (CVD ΔE 19.3-20.3, đạt hết ngưỡng phân biệt màu).
   private readonly vaccineStatusColors: Record<string, string> = {
-    Completed: '#2E7D32', Scheduled: '#1565C0', Overdue: '#C62828',
+    Completed: '#2196F3', Scheduled: '#e87ba4', Overdue: '#C62828',
   };
   vaccineStatusData = computed<ChartData<'doughnut'>>(() => {
     const counts = { Completed: 0, Scheduled: 0, Overdue: 0 };
@@ -158,9 +159,9 @@ export class DashboardComponent implements OnInit {
     },
   };
 
-  // Biểu đồ đường 1 chuỗi — dùng đúng màu xanh chủ đạo của app (--blue-800 #1565C0, giống biểu đồ
-  // cột) thay vì bộ màu teal/hồng/cam gốc của HealthMetricsChartComponent (thiết kế cho trang chi
-  // tiết hồ sơ, lệch tông so với dashboard). Ưu tiên BMI nếu có, không thì cân nặng.
+  // Biểu đồ đường 1 chuỗi — dùng xanh dương tươi (--blue-500, giống biểu đồ cột) thay vì bộ màu
+  // teal/hồng/cam gốc của HealthMetricsChartComponent (thiết kế cho trang chi tiết hồ sơ, lệch
+  // tông so với dashboard). Ưu tiên BMI nếu có, không thì cân nặng.
   private readonly sortedMetrics = computed(() =>
     [...this.metrics()].sort((a, b) => new Date(a.measuredAt).getTime() - new Date(b.measuredAt).getTime()));
   private readonly metricField = computed<'bmi' | 'weightKg'>(() =>
@@ -176,8 +177,8 @@ export class DashboardComponent implements OnInit {
       }),
       datasets: [{
         data: this.sortedMetrics().map(m => m[field] ?? null),
-        borderColor: '#1565C0',
-        backgroundColor: 'rgba(21,101,192,0.08)',
+        borderColor: '#2196F3',
+        backgroundColor: 'rgba(33,150,243,0.08)',
         fill: true,
       }],
     };

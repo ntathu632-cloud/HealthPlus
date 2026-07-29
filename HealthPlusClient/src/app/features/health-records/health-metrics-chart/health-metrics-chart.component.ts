@@ -135,8 +135,8 @@ export class HealthMetricsChartComponent implements OnChanges {
             {
               label: 'Tâm trương (mmHg)',
               data: this.sorted.map(m => m.diastolicBp ?? null),
-              borderColor: '#F57C00',
-              backgroundColor: 'rgba(245,124,0,0.05)',
+              borderColor: '#2196F3',
+              backgroundColor: 'rgba(33,150,243,0.05)',
               fill: false,
             },
           ],

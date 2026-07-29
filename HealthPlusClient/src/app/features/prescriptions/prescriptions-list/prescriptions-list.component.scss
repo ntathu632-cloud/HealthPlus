@@ -17,9 +17,9 @@
 }
 .tab-count {
   padding: 1px 6px; border-radius: 10px; font-size: 11px; font-weight: 700;
-  &.pending    { background: #FFF3E0; color: #E65100; }
+  &.pending    { background: #FCE4EC; color: #AD1457; }
   &.processing { background: #E3F2FD; color: #1565C0; }
-  &.completed  { background: #E8F5E9; color: #2E7D32; }
+  &.completed  { background: #BBDEFB; color: #0D47A1; }
   &.failed     { background: #FFEBEE; color: #C62828; }
 }
 .active .tab-count { background: rgba(255,255,255,0.25); color: white; }
@@ -46,9 +46,9 @@
 }
 .status-bar {
   height: 4px;
-  &.pending    { background: #FF9800; }
+  &.pending    { background: #AD1457; }
   &.processing { background: #1976D2; }
-  &.completed  { background: #2E7D32; }
+  &.completed  { background: #0D47A1; }
   &.failed     { background: #C62828; }
 }
 .card-body { padding: 16px; }
@@ -57,9 +57,9 @@
 .rx-icon {
   width: 40px; height: 40px; border-radius: 12px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  &.pending    { background: #FFF3E0; mat-icon { color: #E65100; } }
+  &.pending    { background: #FCE4EC; mat-icon { color: #AD1457; } }
   &.processing { background: #E3F2FD; mat-icon { color: #1976D2; } }
-  &.completed  { background: #E8F5E9; mat-icon { color: #2E7D32; } }
+  &.completed  { background: #BBDEFB; mat-icon { color: #0D47A1; } }
   &.failed     { background: #FFEBEE; mat-icon { color: #C62828; } }
 }
 .rx-main { flex: 1; }
@@ -68,9 +68,9 @@
 
 .status-chip {
   padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; flex-shrink: 0;
-  &.pending    { background: #FFF3E0; color: #E65100; }
+  &.pending    { background: #FCE4EC; color: #AD1457; }
   &.processing { background: #E3F2FD; color: #1565C0; }
-  &.completed  { background: #E8F5E9; color: #2E7D32; }
+  &.completed  { background: #BBDEFB; color: #0D47A1; }
   &.failed     { background: #FFEBEE; color: #C62828; }
 }
 
@@ -81,7 +81,7 @@
 }
 .med-name { color: var(--hp-text-primary); font-weight: 500; }
 .med-dose { color: var(--hp-text-secondary); }
-.confirmed-icon { font-size: 13px !important; width: 13px !important; height: 13px !important; color: #2E7D32 !important; margin-left: auto; }
+.confirmed-icon { font-size: 13px !important; width: 13px !important; height: 13px !important; color: #0D47A1 !important; margin-left: auto; }
 .more-items { font-size: 11px; color: var(--hp-primary); font-weight: 500; margin-top: 2px; }
 
 .no-items-hint {
