@@ -21,7 +21,9 @@
 
     <mat-form-field appearance="outline">
       <mat-label>Ngày khám</mat-label>
-      <input matInput type="date" formControlName="visitDate" />
+      <input matInput [matDatepicker]="visitPicker" formControlName="visitDate" readonly (click)="visitPicker.open()" />
+      <mat-datepicker-toggle matIconSuffix [for]="visitPicker" />
+      <mat-datepicker #visitPicker />
       @if (form.get('visitDate')?.hasError('required') && form.get('visitDate')?.touched) {
         <mat-error>Bắt buộc nhập</mat-error>
       }
@@ -29,7 +31,9 @@
 
     <mat-form-field appearance="outline">
       <mat-label>Ngày tái khám</mat-label>
-      <input matInput type="date" formControlName="followUpDate" />
+      <input matInput [matDatepicker]="followUpPicker" formControlName="followUpDate" readonly (click)="followUpPicker.open()" />
+      <mat-datepicker-toggle matIconSuffix [for]="followUpPicker" />
+      <mat-datepicker #followUpPicker />
       <mat-hint>Để trống nếu không có</mat-hint>
     </mat-form-field>
 

@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MedicalHistoryService } from '../../../core/services/medical-history.service';
@@ -24,7 +25,7 @@ interface DialogData {
   standalone: true,
   imports: [
     ReactiveFormsModule, MatDialogModule, MatFormFieldModule,
-    MatInputModule, MatSelectModule, MatButtonModule, MatIconModule, MatProgressSpinnerModule,
+    MatInputModule, MatSelectModule, MatButtonModule, MatIconModule, MatDatepickerModule, MatProgressSpinnerModule,
   ]
 })
 export class MedicalHistoryFormDialogComponent implements OnInit {
@@ -53,8 +54,8 @@ export class MedicalHistoryFormDialogComponent implements OnInit {
     const r = this.data.record;
     this.form = this.fb.group({
       healthRecordId: [r?.healthRecordId ?? (this.data.healthRecords[0]?.id ?? ''), Validators.required],
-      visitDate:      [r?.visitDate ?? new Date().toISOString().split('T')[0], Validators.required],
-      followUpDate:   [r?.followUpDate ?? ''],
+      visitDate:      [r?.visitDate ? new Date(r.visitDate) : new Date(), Validators.required],
+      followUpDate:   [r?.followUpDate ? new Date(r.followUpDate) : null],
       hospital:       [r?.hospital ?? ''],
       doctorName:     [r?.doctorName ?? ''],
       specialty:      [r?.specialty ?? ''],
@@ -64,6 +65,16 @@ export class MedicalHistoryFormDialogComponent implements OnInit {
     });
   }
 
+  // mat-datepicker làm việc với đối tượng Date, còn backend nhận DateOnly dạng chuỗi
+  // "yyyy-MM-dd" — tự ghép từ các phần ngày/tháng/năm cục bộ, tránh dùng toISOString()
+  // (quy đổi sang UTC có thể lùi/tiến 1 ngày tuỳ múi giờ trình duyệt).
+  private toDateOnlyString(d: Date): string {
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${y}-${m}-${day}`;
+  }
+
   submit(): void {
     if (this.form.invalid) { this.form.markAllAsTouched(); return; }
     this.loading.set(true);
@@ -71,9 +82,9 @@ export class MedicalHistoryFormDialogComponent implements OnInit {
     const val = this.form.value;
     const payload: Record<string, unknown> = {
       healthRecordId: val.healthRecordId,
-      visitDate: val.visitDate,
+      visitDate: this.toDateOnlyString(val.visitDate),
     };
-    if (val.followUpDate) payload['followUpDate'] = val.followUpDate;
+    if (val.followUpDate) payload['followUpDate'] = this.toDateOnlyString(val.followUpDate);
     if (val.hospital)    payload['hospital']    = val.hospital;
     if (val.doctorName)  payload['doctorName']  = val.doctorName;
     if (val.specialty)   payload['specialty']   = val.specialty;
