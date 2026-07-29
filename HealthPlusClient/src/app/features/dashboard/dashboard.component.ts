@@ -8,7 +8,8 @@ import { DatePipe } from '@angular/common';
 import { BaseChartDirective } from 'ng2-charts';
 import {
   ChartConfiguration, ChartData, Chart, DoughnutController, ArcElement,
-  BarController, BarElement, LinearScale, CategoryScale, Tooltip, Legend,
+  BarController, BarElement, LineController, LineElement, PointElement,
+  LinearScale, CategoryScale, Tooltip, Legend, Filler,
 } from 'chart.js';
 import { AuthService } from '../../core/auth/auth.service';
 import { HealthRecordService } from '../../core/services/health-record.service';
@@ -19,9 +20,12 @@ import { HealthRecord, HealthMetric } from '../../models/health-record.models';
 import { MedicalHistory } from '../../models/medical-history.models';
 import { Vaccine } from '../../models/vaccine.models';
 import { Reminder } from '../../models/reminder.models';
-import { HealthMetricsChartComponent } from '../health-records/health-metrics-chart/health-metrics-chart.component';
 
-Chart.register(DoughnutController, ArcElement, BarController, BarElement, LinearScale, CategoryScale, Tooltip, Legend);
+Chart.register(
+  DoughnutController, ArcElement, BarController, BarElement,
+  LineController, LineElement, PointElement,
+  LinearScale, CategoryScale, Tooltip, Legend, Filler,
+);
 
 interface StatCard { label: string; value: number; icon: string; bg: string; fg: string; lightBg: string; route: string; }
 
@@ -51,7 +55,7 @@ const metricsLoadedOnce      = signal(false);
   standalone: true,
   imports: [
     RouterLink, MatIconModule, MatButtonModule, MatCardModule, MatProgressSpinnerModule, DatePipe,
-    BaseChartDirective, HealthMetricsChartComponent,
+    BaseChartDirective,
   ]
 })
 export class DashboardComponent implements OnInit {
@@ -151,6 +155,50 @@ export class DashboardComponent implements OnInit {
         backgroundColor: 'white', titleColor: '#0F172A', bodyColor: '#546E7A',
         borderColor: '#E2E8F0', borderWidth: 1, padding: 10, boxPadding: 4,
       },
+    },
+  };
+
+  // Biểu đồ đường 1 chuỗi — dùng đúng màu xanh chủ đạo của app (--blue-800 #1565C0, giống biểu đồ
+  // cột) thay vì bộ màu teal/hồng/cam gốc của HealthMetricsChartComponent (thiết kế cho trang chi
+  // tiết hồ sơ, lệch tông so với dashboard). Ưu tiên BMI nếu có, không thì cân nặng.
+  private readonly sortedMetrics = computed(() =>
+    [...this.metrics()].sort((a, b) => new Date(a.measuredAt).getTime() - new Date(b.measuredAt).getTime()));
+  private readonly metricField = computed<'bmi' | 'weightKg'>(() =>
+    this.sortedMetrics().some(m => m.bmi != null) ? 'bmi' : 'weightKg');
+  metricChartTitle = computed(() =>
+    this.metricField() === 'bmi' ? 'Chỉ số BMI theo thời gian' : 'Cân nặng theo thời gian (kg)');
+  metricChartData = computed<ChartData<'line'>>(() => {
+    const field = this.metricField();
+    return {
+      labels: this.sortedMetrics().map(m => {
+        const d = new Date(m.measuredAt);
+        return `${d.getDate()}/${d.getMonth() + 1}`;
+      }),
+      datasets: [{
+        data: this.sortedMetrics().map(m => m[field] ?? null),
+        borderColor: '#1565C0',
+        backgroundColor: 'rgba(21,101,192,0.08)',
+        fill: true,
+      }],
+    };
+  });
+  metricChartOptions: ChartConfiguration<'line'>['options'] = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: 'white', titleColor: '#0F172A', bodyColor: '#546E7A',
+        borderColor: '#E2E8F0', borderWidth: 1, padding: 10, boxPadding: 4,
+      },
+    },
+    scales: {
+      x: { grid: { color: '#F0F4F8' }, ticks: { color: '#64748B', font: { size: 11 } } },
+      y: { grid: { color: '#F0F4F8' }, ticks: { color: '#64748B', font: { size: 11 } } },
+    },
+    elements: {
+      line:  { tension: 0.4, borderWidth: 2 },
+      point: { radius: 3, hoverRadius: 5 },
     },
   };
 

@@ -53,15 +53,15 @@
       }
     </mat-card>
 
-    <mat-card class="chart-card chart-card-wide">
-      <h3 class="chart-title">Chỉ số sức khỏe theo thời gian</h3>
+    <mat-card class="chart-card">
+      <h3 class="chart-title">{{ metricsLoading() || metrics().length === 0 ? 'Chỉ số sức khỏe theo thời gian' : metricChartTitle() }}</h3>
       @if (metricsLoading()) {
         <div class="chart-loading"><mat-spinner diameter="32" /></div>
       } @else if (metrics().length === 0) {
         <div class="chart-empty">Chưa có chỉ số sức khỏe nào được ghi nhận</div>
       } @else {
-        <div class="chart-wrap tall">
-          <app-health-metrics-chart [metrics]="metrics()" />
+        <div class="chart-wrap">
+          <canvas baseChart [data]="metricChartData()" [options]="metricChartOptions" type="line"></canvas>
         </div>
       }
     </mat-card>
