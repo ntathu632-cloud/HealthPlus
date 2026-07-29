@@ -15,9 +15,9 @@ interface Step { number: string; title: string; desc: string; }
 })
 export class AboutComponent {
   readonly roleCards: RoleCard[] = [
-    { icon: 'person', color: '#1565C0', title: 'Bệnh nhân', desc: 'Quản lý hồ sơ sức khỏe, lịch sử khám, đơn thuốc, sổ tiêm chủng và đặt lịch hẹn với bác sĩ.' },
-    { icon: 'medical_services', color: '#C62828', title: 'Bác sĩ', desc: 'Theo dõi bệnh nhân được phân công, ghi nhận chẩn đoán, kê đơn thuốc và quản lý lịch hẹn khám.' },
-    { icon: 'admin_panel_settings', color: '#6A1B9A', title: 'Quản trị viên', desc: 'Vận hành hệ thống, quản lý tài khoản và phân quyền một cách an toàn.' },
+    { icon: 'person', color: '#1976D2', title: 'Bệnh nhân', desc: 'Quản lý hồ sơ sức khỏe, lịch sử khám, đơn thuốc, sổ tiêm chủng và đặt lịch hẹn với bác sĩ.' },
+    { icon: 'medical_services', color: '#1976D2', title: 'Bác sĩ', desc: 'Theo dõi bệnh nhân được phân công, ghi nhận chẩn đoán, kê đơn thuốc và quản lý lịch hẹn khám.' },
+    { icon: 'admin_panel_settings', color: '#1976D2', title: 'Quản trị viên', desc: 'Vận hành hệ thống, quản lý tài khoản và phân quyền một cách an toàn.' },
   ];
 
   readonly steps: Step[] = [

@@ -38,7 +38,7 @@ export class LandingComponent implements AfterViewInit {
 
   readonly roleCards: RoleCard[] = [
     {
-      icon: 'person', color: '#1565C0',
+      icon: 'person', color: '#1976D2',
       title: 'Bệnh nhân',
       desc: 'Chủ động quản lý sức khỏe cho bản thân và gia đình',
       features: [
@@ -49,7 +49,7 @@ export class LandingComponent implements AfterViewInit {
       ],
     },
     {
-      icon: 'medical_services', color: '#C62828',
+      icon: 'medical_services', color: '#1976D2',
       title: 'Bác sĩ',
       desc: 'Theo dõi và chăm sóc bệnh nhân hiệu quả hơn',
       features: [
@@ -60,7 +60,7 @@ export class LandingComponent implements AfterViewInit {
       ],
     },
     {
-      icon: 'admin_panel_settings', color: '#6A1B9A',
+      icon: 'admin_panel_settings', color: '#1976D2',
       title: 'Quản trị viên',
       desc: 'Vận hành hệ thống an toàn và linh hoạt',
       features: [
@@ -73,13 +73,13 @@ export class LandingComponent implements AfterViewInit {
   ];
 
   readonly featureTiles: FeatureTile[] = [
-    { icon: 'folder_shared', color: '#AD1457', title: 'Hồ sơ sức khỏe số hoá — Miễn phí', desc: 'Lưu trữ đầy đủ chỉ số sức khỏe, bệnh sử, dễ dàng theo dõi qua biểu đồ. Hoàn toàn miễn phí.' },
-    { icon: 'local_hospital', color: '#1565C0', title: 'Tư vấn bác sĩ trực tuyến', desc: 'Đặt lịch tư vấn với bác sĩ từ nhiều bệnh viện, theo chuyên khoa — tính phí theo từng lượt tư vấn.' },
-    { icon: 'smart_toy', color: '#6A1B9A', title: 'Trợ lý AI sức khỏe', desc: 'Trò chuyện cùng AI để giải đáp nhanh thắc mắc về sức khỏe, mọi lúc — miễn phí sử dụng.' },
-    { icon: 'medication', color: '#C62828', title: 'Đơn thuốc & nhận diện tự động', desc: 'Chụp ảnh đơn thuốc, hệ thống tự nhận diện tên thuốc và liều dùng.' },
-    { icon: 'vaccines', color: '#0D47A1', title: 'Theo dõi tiêm chủng', desc: 'Quản lý lịch tiêm theo từng mũi, cảnh báo khi quá hạn.' },
-    { icon: 'notifications_active', color: '#AD1457', title: 'Nhắc nhở thông minh', desc: 'Không bỏ lỡ lịch uống thuốc, lịch tiêm chủng hay lịch tái khám.' },
-    { icon: 'verified_user', color: '#00838F', title: 'Bảo mật & phân quyền', desc: 'Dữ liệu chỉ hiển thị đúng người có quyền — bác sĩ, bệnh nhân, quản trị viên.' },
+    { icon: 'folder_shared', color: '#1976D2', title: 'Hồ sơ sức khỏe số hoá — Miễn phí', desc: 'Lưu trữ đầy đủ chỉ số sức khỏe, bệnh sử, dễ dàng theo dõi qua biểu đồ. Hoàn toàn miễn phí.' },
+    { icon: 'local_hospital', color: '#1976D2', title: 'Tư vấn bác sĩ trực tuyến', desc: 'Đặt lịch tư vấn với bác sĩ từ nhiều bệnh viện, theo chuyên khoa — tính phí theo từng lượt tư vấn.' },
+    { icon: 'smart_toy', color: '#1976D2', title: 'Trợ lý AI sức khỏe', desc: 'Trò chuyện cùng AI để giải đáp nhanh thắc mắc về sức khỏe, mọi lúc — miễn phí sử dụng.' },
+    { icon: 'medication', color: '#1976D2', title: 'Đơn thuốc & nhận diện tự động', desc: 'Chụp ảnh đơn thuốc, hệ thống tự nhận diện tên thuốc và liều dùng.' },
+    { icon: 'vaccines', color: '#1976D2', title: 'Theo dõi tiêm chủng', desc: 'Quản lý lịch tiêm theo từng mũi, cảnh báo khi quá hạn.' },
+    { icon: 'notifications_active', color: '#1976D2', title: 'Nhắc nhở thông minh', desc: 'Không bỏ lỡ lịch uống thuốc, lịch tiêm chủng hay lịch tái khám.' },
+    { icon: 'verified_user', color: '#1976D2', title: 'Bảo mật & phân quyền', desc: 'Dữ liệu chỉ hiển thị đúng người có quyền — bác sĩ, bệnh nhân, quản trị viên.' },
   ];
 
   readonly steps: Step[] = [

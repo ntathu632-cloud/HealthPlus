@@ -16,12 +16,7 @@ mat-dialog-content { padding: 16px 24px !important; min-width: 380px; }
   width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
   font-size: 18px;
-  &.push     { background: #EDE7F6; color: #6A1B9A; }
-  &.email    { background: #E3F2FD; color: #1565C0; }
-  &.sms      { background: #BBDEFB; color: #0D47A1; }
-  &.vaccine  { background: #FCE4EC; color: #AD1457; }
-  &.medicine { background: #FCE4EC; color: #AD1457; }
-  &.followup { background: #E0F7FA; color: #00695C; }
+  &.push, &.email, &.sms, &.vaccine, &.medicine, &.followup { background: #E3F2FD; color: #1976D2; }
 }
 .toggle-info { flex: 1; span { font-size: 14px; color: var(--hp-text-primary); display: block; } small { font-size: 11px; color: var(--hp-text-secondary); } }
 .my-divider { margin: 12px 0 !important; }
