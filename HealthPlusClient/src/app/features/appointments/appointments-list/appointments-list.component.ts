@@ -1,9 +1,12 @@
 import { Component, OnInit, signal, computed } from '@angular/core';
 import { DatePipe, DecimalPipe, NgClass } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatChipsModule, MatChipListboxChange } from '@angular/material/chips';
@@ -20,15 +23,17 @@ import { BookAppointmentDialogComponent } from '../book-appointment-dialog/book-
     selector: 'app-appointments-list',
   standalone: true,
   imports: [
-    DatePipe, DecimalPipe, NgClass, RouterLink,
-    MatCardModule, MatButtonModule, MatIconModule, MatProgressSpinnerModule, MatTooltipModule, MatChipsModule,
+    DatePipe, DecimalPipe, NgClass, RouterLink, FormsModule,
+    MatCardModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule,
+    MatProgressSpinnerModule, MatTooltipModule, MatChipsModule,
   ]
 })
 export class AppointmentsListComponent implements OnInit {
   allItems = signal<Appointment[]>([]);
   loading = signal(true);
   payingId = signal<string | null>(null);
-  selectedStatus = 'All';
+  selectedStatus = signal('All');
+  searchTerm = signal('');
 
   readonly statusTabs = [
     { value: 'All',       label: 'Tất cả' },
@@ -39,8 +44,12 @@ export class AppointmentsListComponent implements OnInit {
   ];
 
   filteredItems = computed(() => {
-    if (this.selectedStatus === 'All') return this.allItems();
-    return this.allItems().filter(a => a.status === this.selectedStatus);
+    const status = this.selectedStatus();
+    const term = this.searchTerm().trim().toLowerCase();
+    return this.allItems().filter(a =>
+      (status === 'All' || a.status === status) &&
+      (!term || a.doctorName.toLowerCase().includes(term))
+    );
   });
 
   constructor(
@@ -61,7 +70,7 @@ export class AppointmentsListComponent implements OnInit {
   }
 
   onStatusFilterChange(e: MatChipListboxChange): void {
-    this.selectedStatus = e.value;
+    this.selectedStatus.set(e.value);
   }
 
   countByStatus(status: string): number {

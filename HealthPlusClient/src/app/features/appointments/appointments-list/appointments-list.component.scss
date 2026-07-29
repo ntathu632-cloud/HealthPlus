@@ -5,11 +5,15 @@
 .page-subtitle { color: var(--hp-text-secondary); font-size: 14px; margin: 0; }
 .loading-center { display: flex; justify-content: center; padding: 80px 0; }
 
+.filter-row {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+  flex-wrap: wrap; margin-bottom: 20px;
+}
+
 // Dùng mat-chip-listbox của Angular Material thay cho <button> tự viết — Material tự lo việc
 // canh hàng/kích thước nhất quán giữa các chip, tránh mọi lỗi lệch dòng/lệch font đã gặp phải
 // với layout tự viết trước đây.
 .status-tabs {
-  margin-bottom: 20px;
   --mdc-chip-container-height: 32px;
   --mdc-chip-label-text-size: 13px;
   --mdc-chip-label-text-color: var(--hp-text-secondary);
@@ -17,6 +21,11 @@
   --mdc-chip-outline-color: var(--hp-border);
   --mdc-chip-selected-label-text-color: white;
   --mdc-chip-elevated-selected-container-color: var(--hp-primary);
+}
+.search-field {
+  width: 260px; flex-shrink: 0;
+  ::ng-deep .mat-mdc-text-field-wrapper { height: 44px; }
+  ::ng-deep .mat-mdc-form-field-infix { min-height: 44px; padding-top: 10px; padding-bottom: 10px; }
 }
 .tab-count {
   padding: 1px 6px; border-radius: 10px; font-size: 11px; font-weight: 700; margin-left: 4px;

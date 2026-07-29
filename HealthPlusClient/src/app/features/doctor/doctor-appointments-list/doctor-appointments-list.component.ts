@@ -18,7 +18,7 @@ import { Appointment } from '../../../models/appointment.models';
 export class DoctorAppointmentsListComponent implements OnInit {
   allItems = signal<Appointment[]>([]);
   loading = signal(true);
-  selectedStatus = 'All';
+  selectedStatus = signal('All');
 
   readonly statusTabs = [
     { value: 'All',       label: 'Tất cả' },
@@ -29,8 +29,9 @@ export class DoctorAppointmentsListComponent implements OnInit {
   ];
 
   filteredItems = computed(() => {
-    if (this.selectedStatus === 'All') return this.allItems();
-    return this.allItems().filter(a => a.status === this.selectedStatus);
+    const status = this.selectedStatus();
+    if (status === 'All') return this.allItems();
+    return this.allItems().filter(a => a.status === status);
   });
 
   constructor(private svc: AppointmentService, private snack: MatSnackBar) {}

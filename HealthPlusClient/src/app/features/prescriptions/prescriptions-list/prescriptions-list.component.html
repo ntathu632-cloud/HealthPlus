@@ -15,8 +15,8 @@
   <div class="status-tabs">
     @for (tab of statusTabs; track tab.value) {
       <button class="status-tab"
-        [class.active]="selectedStatus === tab.value"
-        (click)="selectedStatus = tab.value">
+        [class.active]="selectedStatus() === tab.value"
+        (click)="selectedStatus.set(tab.value)">
         {{ tab.label }}
         @if (countByStatus(tab.value) > 0) {
           <span class="tab-count" [ngClass]="tab.value.toLowerCase()">
