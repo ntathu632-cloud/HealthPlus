@@ -48,25 +48,30 @@
   &.cancelled  { background: #C62828; }
 }
 .row-body { flex: 1; padding: 14px 16px; min-width: 0; }
-.row-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
 .doctor-name {
   display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--hp-text-primary);
+  margin-bottom: 4px;
   mat-icon { font-size: 18px; width: 18px; height: 18px; color: var(--hp-text-secondary); }
 }
+.time { font-size: 12px; color: var(--hp-text-secondary); }
+.reason { font-size: 13px; color: var(--hp-text-primary); margin: 6px 0 0; }
+.notes { font-size: 12px; color: var(--hp-text-secondary); margin: 4px 0 0; font-style: italic; }
+
+// Cột riêng bên phải, sát mép khung — chứa tag trạng thái + nút huỷ (nếu có) xếp dọc, luôn
+// cùng 1 vị trí/độ rộng cho mọi dòng bất kể trạng thái đó có nút huỷ hay không.
+.actions-slot {
+  width: 100px; flex-shrink: 0; padding: 14px 14px 14px 12px;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  border-left: 1px solid var(--hp-border);
+}
 .status-chip {
-  padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; white-space: nowrap;
+  width: 100%; box-sizing: border-box; text-align: center;
+  padding: 3px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; white-space: nowrap;
   &.pending    { background: #FCE4EC; color: #AD1457; }
   &.confirmed  { background: #E3F2FD; color: #1565C0; }
   &.completed  { background: #BBDEFB; color: #0D47A1; }
   &.cancelled  { background: #FFEBEE; color: #C62828; }
 }
-.time { font-size: 12px; color: var(--hp-text-secondary); }
-.reason { font-size: 13px; color: var(--hp-text-primary); margin: 6px 0 0; }
-.notes { font-size: 12px; color: var(--hp-text-secondary); margin: 4px 0 0; font-style: italic; }
-// Luôn chừa cùng 1 khoảng rộng cho vùng này dù có nút huỷ hay không — nếu không, các dòng
-// Hoàn thành/Đã huỷ (không có nút) sẽ có row-body rộng hơn các dòng Chờ xác nhận/Đã xác nhận
-// (bị nút huỷ chiếm chỗ), khiến status-chip bên trong .row-top lệch vị trí giữa các dòng.
-.actions-slot { width: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
 .del-btn { color: #BDBDBD !important; &:hover { color: var(--hp-danger) !important; } }
 
 .pay-row { display: flex; align-items: center; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
