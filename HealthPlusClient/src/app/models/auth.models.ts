@@ -35,4 +35,9 @@ export interface UserResponse {
   lastLoginAt?: string;
   createdAt: string;
   roles: string[];
+  // Chỉ có giá trị với tài khoản vai trò Bác sĩ.
+  hospitalId?: string;
+  hospitalName?: string;
+  specialty?: string;
+  consultationFee?: number;
 }

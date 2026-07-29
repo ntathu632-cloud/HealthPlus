@@ -22,4 +22,9 @@ export const DOCTOR_ROUTES: Routes = [
     loadComponent: () =>
       import('./doctor-appointments-list/doctor-appointments-list.component').then(m => m.DoctorAppointmentsListComponent),
   },
+  {
+    path: 'earnings',
+    loadComponent: () =>
+      import('./doctor-earnings/doctor-earnings.component').then(m => m.DoctorEarningsComponent),
+  },
 ];

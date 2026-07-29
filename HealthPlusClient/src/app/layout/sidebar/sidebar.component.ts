@@ -21,6 +21,7 @@ const DOCTOR_NAV: NavItem[] = [
   { label: 'Tổng quan',         icon: 'grid_view', route: '/doctor/dashboard' },
   { label: 'Bệnh nhân của tôi', icon: 'groups', route: '/doctor/patients' },
   { label: 'Lịch hẹn khám',     icon: 'event',  route: '/doctor/appointments' },
+  { label: 'Doanh thu',         icon: 'payments', route: '/doctor/earnings' },
 ];
 
 const ADMIN_NAV: NavItem[] = [

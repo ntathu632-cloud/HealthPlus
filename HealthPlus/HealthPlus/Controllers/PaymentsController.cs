@@ -19,6 +19,14 @@ public class PaymentsController : BaseApiController
         return Ok(ApiResponse<IEnumerable<PaymentResponse>>.Ok(result));
     }
 
+    [Authorize(Roles = "Doctor")]
+    [HttpGet("doctor-earnings")]
+    public async Task<IActionResult> GetMyEarnings(CancellationToken ct)
+    {
+        var result = await _service.GetMyEarningsAsync(CurrentUserId, ct);
+        return Ok(ApiResponse<IEnumerable<PaymentResponse>>.Ok(result));
+    }
+
     [HttpPost("{appointmentId:guid}/pay")]
     public async Task<IActionResult> Pay(Guid appointmentId, CancellationToken ct)
     {

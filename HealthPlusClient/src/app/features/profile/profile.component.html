@@ -58,6 +58,36 @@
           <input matInput formControlName="phoneNumber" placeholder="0912345678" />
         </mat-form-field>
 
+        @if (auth.isDoctor()) {
+          <p class="section-label full-width">Thông tin chuyên môn</p>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Chuyên khoa</mat-label>
+            <mat-select formControlName="specialty">
+              <mat-option value="">-- Chọn chuyên khoa --</mat-option>
+              @for (s of specialties; track s) {
+                <mat-option [value]="s">{{ s }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Bệnh viện / Phòng khám</mat-label>
+            <mat-select formControlName="hospitalId">
+              <mat-option value="">-- Chưa chọn --</mat-option>
+              @for (h of hospitals(); track h.id) {
+                <mat-option [value]="h.id">{{ h.name }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Phí tư vấn (đ / lượt)</mat-label>
+            <input matInput type="number" min="0" formControlName="consultationFee" />
+            <mat-hint>Để 0 nếu tư vấn miễn phí</mat-hint>
+          </mat-form-field>
+        }
+
         <div class="full-width actions-row">
           <button mat-raised-button color="primary" (click)="saveProfile()"
             [disabled]="savingProfile() || profileForm.invalid">

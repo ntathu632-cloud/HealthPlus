@@ -9,9 +9,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatSelectModule } from '@angular/material/select';
 import { UserService } from '../../core/services/user.service';
+import { HospitalService } from '../../core/services/hospital.service';
 import { AuthService } from '../../core/auth/auth.service';
 import { UserResponse } from '../../models/auth.models';
+import { Hospital } from '../../models/hospital.models';
 
 function passwordsMatchValidator(control: AbstractControl): ValidationErrors | null {
   const newPassword = control.get('newPassword')?.value;
@@ -29,7 +32,7 @@ function passwordsMatchValidator(control: AbstractControl): ValidationErrors | n
   imports: [
     DatePipe, ReactiveFormsModule,
     MatCardModule, MatButtonModule, MatIconModule, MatFormFieldModule,
-    MatInputModule, MatProgressSpinnerModule, MatDividerModule,
+    MatInputModule, MatSelectModule, MatProgressSpinnerModule, MatDividerModule,
   ]
 })
 export class ProfileComponent implements OnInit {
@@ -38,6 +41,14 @@ export class ProfileComponent implements OnInit {
   savingPassword = signal(false);
   uploadingAvatar = signal(false);
   user = signal<UserResponse | null>(null);
+  hospitals = signal<Hospital[]>([]);
+
+  readonly specialties = [
+    'Nội khoa', 'Ngoại khoa', 'Nhi khoa', 'Sản phụ khoa', 'Tim mạch',
+    'Tiêu hóa', 'Thần kinh', 'Da liễu', 'Tai mũi họng', 'Mắt',
+    'Răng hàm mặt', 'Ung bướu', 'Xương khớp', 'Hô hấp', 'Nội tiết',
+    'Tâm thần', 'Phục hồi chức năng', 'Khám tổng quát',
+  ];
 
   profileForm: FormGroup;
   passwordForm: FormGroup;
@@ -45,12 +56,16 @@ export class ProfileComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private userSvc: UserService,
-    private auth: AuthService,
+    private hospitalSvc: HospitalService,
+    public auth: AuthService,
     private snack: MatSnackBar,
   ) {
     this.profileForm = this.fb.group({
       fullName: ['', Validators.required],
       phoneNumber: [''],
+      hospitalId: [''],
+      specialty: [''],
+      consultationFee: [0],
     });
     this.passwordForm = this.fb.group({
       currentPassword: ['', Validators.required],
@@ -66,11 +81,18 @@ export class ProfileComponent implements OnInit {
         this.profileForm.patchValue({
           fullName: res.data.fullName,
           phoneNumber: res.data.phoneNumber ?? '',
+          hospitalId: res.data.hospitalId ?? '',
+          specialty: res.data.specialty ?? '',
+          consultationFee: res.data.consultationFee ?? 0,
         });
         this.loading.set(false);
       },
       error: () => this.loading.set(false),
     });
+
+    if (this.auth.isDoctor()) {
+      this.hospitalSvc.getAll().subscribe({ next: res => this.hospitals.set(res.data) });
+    }
   }
 
   initials(): string {
@@ -82,7 +104,13 @@ export class ProfileComponent implements OnInit {
     if (this.profileForm.invalid) { this.profileForm.markAllAsTouched(); return; }
     this.savingProfile.set(true);
     const v = this.profileForm.value;
-    this.userSvc.updateProfile({ fullName: v.fullName, phoneNumber: v.phoneNumber || undefined }).subscribe({
+    const payload: Record<string, unknown> = { fullName: v.fullName, phoneNumber: v.phoneNumber || undefined };
+    if (this.auth.isDoctor()) {
+      payload['hospitalId'] = v.hospitalId || undefined;
+      payload['specialty'] = v.specialty || undefined;
+      payload['consultationFee'] = v.consultationFee || 0;
+    }
+    this.userSvc.updateProfile(payload as any).subscribe({
       next: res => {
         this.user.set(res.data);
         this.auth.updateUser({ fullName: res.data.fullName, avatarUrl: res.data.avatarUrl });

@@ -4,6 +4,7 @@ export interface Payment {
   id: string;
   appointmentId: string;
   doctorName: string;
+  patientName: string;
   appointmentTime: string;
   amount: number;
   status: PaymentStatus;

@@ -24,6 +24,13 @@ public class UserService : IUserService
         var roleIds = userRoles.Select(ur => ur.RoleId).ToList();
         var roles = await _uow.Roles.FindAsync(r => roleIds.Contains(r.Id), ct);
 
+        string? hospitalName = null;
+        if (user.HospitalId.HasValue)
+        {
+            var hospital = await _uow.Hospitals.GetByIdAsync(user.HospitalId.Value, ct);
+            hospitalName = hospital?.Name;
+        }
+
         return new UserResponse
         {
             Id = user.Id,
@@ -35,6 +42,10 @@ public class UserService : IUserService
             LastLoginAt = user.LastLoginAt,
             CreatedAt = user.CreatedAt,
             Roles = roles.Select(r => r.Name),
+            HospitalId = user.HospitalId,
+            HospitalName = hospitalName,
+            Specialty = user.Specialty,
+            ConsultationFee = user.ConsultationFee,
         };
     }
 
@@ -45,6 +56,15 @@ public class UserService : IUserService
 
         user.FullName = request.FullName.Trim();
         user.PhoneNumber = request.PhoneNumber?.Trim();
+
+        var isDoctor = await _uow.UserRoles.AnyAsync(ur => ur.UserId == userId && ur.RoleId == 2, ct);
+        if (isDoctor)
+        {
+            user.HospitalId = request.HospitalId;
+            user.Specialty = request.Specialty?.Trim();
+            user.ConsultationFee = request.ConsultationFee;
+        }
+
         user.UpdatedAt = DateTime.UtcNow;
         _uow.Users.Update(user);
         await _uow.SaveChangesAsync(ct);

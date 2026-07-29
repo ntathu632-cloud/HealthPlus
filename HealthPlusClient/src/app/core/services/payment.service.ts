@@ -15,6 +15,10 @@ export class PaymentService {
     return this.http.get<ApiResponse<Payment[]>>(`${this.api}/my`);
   }
 
+  getMyEarnings(): Observable<ApiResponse<Payment[]>> {
+    return this.http.get<ApiResponse<Payment[]>>(`${this.api}/doctor-earnings`);
+  }
+
   pay(appointmentId: string): Observable<ApiResponse<Payment>> {
     return this.http.post<ApiResponse<Payment>>(`${this.api}/${appointmentId}/pay`, {});
   }
